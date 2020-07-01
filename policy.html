@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-include("includes/header.html");
+
 include("includes/db.php");
 include("functions/functions.php");
 ?>
@@ -31,6 +31,121 @@ include("functions/functions.php");
 		
 <body>
 
+	<div id="top">
+   <div class="container">
+   <div class="col-md-6 offer">
+   <a href="#" class="btn btn-success btn-sm">
+   ANNOVA
+   </a>
+   <a href="#">Phone:8887951971</a>/<a href="#">vikashdeepak2014@gmail.com</a>
+   
+   </div>
+   <ul class="menu">
+   <li>
+   <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-rss"></i></a>
+   </li>
+   
+   </ul>
+   </div>
+   </div>
+   
+<div class="navbar navbar-default" id="navbar">  <!--navbar navbar-default start-->
+   <div class="container">
+   <div class="navbar-header">
+   
+   <a class="navbar-brand home" href="index.html">
+   <img src="images/logo2.png" alt="Annova" class="hidden-xs">
+   <img src="images/logo2.png" alt="Annova" class="visible-xs">
+   </a>
+   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+    <span class="sr-only">Toggle Navigation</span>
+	<i class="fa fa-align-justify"></i>
+   
+   </button>
+   <button type="button" class="navbar-togglele" data-toggle="navbar-toggle" data-target="#search">
+   <span class="sr-only"></span>
+   <i class="fa fa-search"></i>
+   
+   </button>
+</div>
+<div  class="navbar-collapse" id="navigation">
+   <div class="padding-nav">
+   <ul class="nav navbar-nav navbar-left" style="background-color:#ff9999;">
+   <li class="active">
+   <a href="index.html">Home</a>
+   </li>
+   <li>
+   <a href="research.html">Research</a>
+   </li>
+    <li>
+   <a href="policy.html">Policy Design</a>
+   </li>
+   
+   
+   
+   <li>
+   <a href="service.html">Services</a>
+   </li>
+   
+   <li>
+   <a href="about.html">About Us</a>
+   </li>
+   
+   
+   
+   <li>
+   <a href="contact.html">Contact Us</a>
+   </li>
+   
+   
+   
+   
+   </ul>
+   </div>
+   <a href="service.html" class="btn btn-primary navbar-btn right">
+   
+   <i class="fa fa-shopping.cart"></i>
+   <span>Service Price</span>
+   
+   </a>
+   <div class="navbar-collapse collapse right">
+   <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
+   
+   <span class="sr-only"> Toggle Search</span>
+   <i class="fa-fa-search"></i>
+   
+   </button>
+   </div>
+   
+   <div class="collapse clearfix" id="search">
+   
+   
+   
+
+ 
+<form class="navbar-form" method="get" action="">
+
+<div class="input-group">
+
+<input type="text" name="user_query" placeholder="Search" class="form-control" required="">
+<span class="input-group-btn">
+<button type="submit" value="Search" name="search" class="btn btn-primary">
+<i class="fa fa-search"></i>
+</button>
+</span>
+</div>
+</form>
+</div>
+   </div>
+   </div>
+     </div>
+	 
+	
+	
 <div id="content">
 	<div class="container"><!--container Start-->
 		<div class="col-md-12"><!--col-md-12 Start-->
@@ -57,9 +172,96 @@ include("functions/functions.php");
 
 		
 		<!--Footer Start-->
-<?php 
-include("includes/footer.html");
- ?>
+<div id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md col-sm-6">
+<h4> Pages</h4>
+<ul>
+<li><a href="#">Research</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="service.html">Services</a></li>
+<li><a href="service.html">PHD Guidance</a></li>
+</ul>
+<hr>
+<h4>User Section</h4>
+<ul>
+<li><a href="#">Login</a></li>
+<li><a href="#">Register</a></li>
+</ul>
+<hr class="hidden-md hidden-lg hidden-sm">
+</div>
+<div class="col-md-3 col-sm-6">
+<h4>Top Service Categories</h4>
+<ul>
+<li><a href="#"> Synopsis Plan</a></li>
+<li><a href="#"> PHD Guidance</a></li>
+<li><a href="#"> Survey Design</a></li>
+<li><a href="#"> Data Analysis</a></li>
+<li><a href="#"> Counsultancy</a></li>
+
+
+</ul>
+<hr class="hidden-md hidden-lg">
+
+</div>
+<div class="col-md-3 col-sm-6">
+<h4>where to find us</h4>
+<p>
+
+<strong>Annovaresearch.com</strong>
+<br>Aliganj
+<br>Lucknow
+<br>Uttar Pradesh
+<br>vikashdeepak2014@gmail.com
+<br>+91 8887951971
+</p>
+<a href="contact.html">Go to contact us page</a>
+<hr class="hidden-md hidden-lg">
+
+</div>
+<div class="col-md-3 col-sm-6">
+<h4>Get the news</h4>
+<p class="text-muted">
+  subscribe here for getting news of Annova Research lucknow
+  </p>
+  <form action="" method="post">
+  <div class="input-group">
+  <input type="text" name="email" class="form-control">
+  <span class="input-group-btn">
+  <input type="submit" class="btn btn-default" value="subscribe">
+  
+  </span>
+  
+</div>
+</form>
+<hr>
+<h4>Stay In Touch</h4>
+<p class="social">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-google-plus"></i></a>
+<a href="#"><i class="fa fa-envelope"></i></a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="copyright">
+<div class="container">
+<div class="col-md-6">
+<p class="pull-left">
+   &copy; 2020 annovaresearch.com
+   </p>
+   </div>
+   <div class="col-md-6">
+   <p class="pull-right">
+      Template By: <a href="www.Annovaresearch.com">Annovaresearch.com</a>
+	  </p>
+	  
+	  </div>
+	  </div>
 
 <!--Footer End-->
 
