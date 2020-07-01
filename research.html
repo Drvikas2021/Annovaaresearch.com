@@ -1,0 +1,94 @@
+<?php
+session_start();
+include("includes/header.html");
+include("includes/db.php");
+include("functions/functions.php");
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Annova Research</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles/style.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+<style>
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+#t01 th {
+  background-color: black;
+  color: white;
+}
+</style>
+
+</head>
+<body>
+
+<table id="t01">
+  <tr>
+    <th>Research Area</th>
+    <th>Theme</th> 
+    <th>Publication</th>
+  </tr>
+  <tr>
+    <td>Economics</td>
+    <td>Socio-Economic Research</td>
+  <td><a href="http://www.researchgate.com">www.researchgate.com</a><br>
+  <a href="/images/.jpg" download>
+  <img src="/images/.jpg" alt="PDF" width="104" height="142">
+</a></td>
+  </tr>
+  <tr>
+    <td>Economics</td>
+    <td>Socio-Economic Research</td>
+    <td><a href="http://www.researchgate.com">www.researchgate.com</a><br>
+  <a href="/images/.jpg" download>
+  <img src="/images/.jpg" alt="PDF" width="104" height="142">
+</a></td>
+  </tr>
+  <tr>
+    <td>Economics</td>
+    <td>Socio-Economic Research</td>
+    <td><a href="http://www.researchgate.com">www.researchgate.com</a><br>
+  <a href="/images/.jpg" download>
+  <img src="/images/.jpg" alt="PDF" width="104" height="142">
+</a></td>
+  </tr>
+</table>
+
+
+
+
+
+
+<!--Footer Start-->
+<?php 
+include("includes/footer.html");
+ ?>
+
+<!--Footer End-->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+</html>

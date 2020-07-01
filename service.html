@@ -1,0 +1,124 @@
+
+<?php
+session_start();
+include("includes/header.html");
+
+
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles/style.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+</style>
+
+
+</head>
+<body>
+
+<h2 style="text-align:center"> Pricing Tables</h2>
+<p style="text-align:center">Our Thematic Areas.</p>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Services</li>
+    <li class="grey">INR</li>
+    <li>Topic And Synopsis Help:-10000</li>
+    <li>PHD Guidance:-25000</li>
+    <li>Questionnaire Design:-5000</li>
+    <li>Statistical Service:-10000</li>
+    <li class="grey"><a href="contact.html" class="button">Subscribe</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#4CAF50">Word Count/Pages</li>
+    <li class="grey">Number</li>
+    <li>5000</li>
+    <li>Full PHD Guidance</li>
+    <li>Not Applicable</li>
+    <li>Not Applicable</li>
+    <li class="grey"><a href="contact.html" class="button">Subscribe</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Time Provided</li>
+    <li class="grey">Time</li>
+    <li>15 Days</li>
+    <li>6 Months</li>
+    <li>7 Days</li>
+    <li>10 Days</li>
+    <li class="grey"><a href="contact.html" class="button">Subscribe</a></li>
+  </ul>
+</div>
+<!--Footer Start-->
+<?php 
+include("includes/footer.html");
+ ?>
+
+<!--Footer End-->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+</html>

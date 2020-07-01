@@ -1,0 +1,10 @@
+#top-bar span{
+	font-size:15px;
+	
+}
+
+#top-bar .menu > li{
+	display: inline-block; 
+	text-align: right;
+}
+
