@@ -344,13 +344,19 @@ var x = setInterval(function() {
 <div class="row">
 <div class="col-md-8">
 <novalidate>
- <input class="form-control" name="name" placeholder="Name"/><br/>
+ <form
+  action="https://formspree.io/vikashdeepak2014@gmail.com"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <input class="form-control" name="name" placeholder="Name"/><br/>
  <input class="form-control" name="phone" placeholder="Phone"/><br/>
  <input class="form-control" name="email" placeholder="Email"/><br/>
  <input class="form-control" name="text" placeholder="How Can We Help You?"
  style="height:150px;"></textarea><br/>
  									
  <input class="btn btn-primary" type="submit" value="Send"/><br/><br/>
+</form>
  </form>
 </div>
 
