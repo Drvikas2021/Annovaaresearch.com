@@ -1,67 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annova Research</title>
+	<meta charset="utf-8">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 * {
   box-sizing: border-box;
 }
 
-.columns {
+/* Create four equal columns that floats next to each other */
+.column {
   float: left;
-  width: 33.3%;
-  padding: 8px;
+  width: 25%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
 }
 
-.price {
-  list-style-type: none;
-  border: 1px solid #eee;
-  margin: 0;
-  padding: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ul.price{
+	style: none;
+	
+	
+}
+h2.center{
+	text-align: center;
+	color: green;
 }
 
-.price:hover {
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+ ul > li{
+	
+	font-size:20px;
+	text-align: center;
 }
 
-.price .header {
-  background-color: #111;
-  color: white;
-  font-size: 25px;
-}
-
-.price li {
-  border-bottom: 1px solid #eee;
-  padding: 20px;
-  text-align: center;
-}
-
-.price .grey {
-  background-color: #eee;
-  font-size: 20px;
-}
-
-.button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-@media only screen and (max-width: 600px) {
-  .columns {
-    width: 100%;
-  }
-}
 </style>
-
-
 </head>
 <body>
 
@@ -74,6 +60,7 @@
    <a href="#">Phone:8887951971</a>/<a href="#">vikashdeepak2014@gmail.com</a>
    
    </div>
+   <div class="col-md-6">
    <ul class="menu">
    <li>
    <a href="#"><i class="fa fa-twitter"></i></a>
@@ -177,140 +164,284 @@
    </div>
    </div>
      </div>
+	  </div>
 	 
-		
+
+<h1 style="text-align:center;color:green;">Basic Pack Service</h1>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2 class="center">Services</h2>
+    <ul class="price">
+    
+
+    
+    <li style="color:#00BFFF;">Topic And Synopsis Help</li>
+    <li style="color:#FF00FF;">PHD Guidance</li>
+    <li style="color:#FFD700;">Questionnaire Design</li>
+    <li style="color:#FFFACD;">Statistical Service</li>
+    </ul>
 	
-<h2 style="text-align:center"> Pricing Tables</h2>
-<p style="text-align:center">Our Thematic Areas.</p>
+	<ul>
+   
+	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
+	</ul>
+  </div>
+  <div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2 style="text-align:center; color:green;">Price</h2>
+    <ul class="price">
+    
 
-<div class="columns">
-  <ul class="price">
-    <li class="header">Services</li>
-    <li class="grey">INR</li>
-    <li>Topic And Synopsis Help:-10000</li>
-    <li>PHD Guidance:-25000</li>
-    <li>Questionnaire Design:-5000</li>
-    <li>Statistical Service:-10000</li>
-    <li class="grey"><a href="contact.html" class="button">Subscribe</a></li>
-  </ul>
-</div>
+    
+    <li>15000 ₹</li>
+    <li>25000 ₹</li>
+    <li>5000 ₹</li>
+    <li>10000 ₹</li>
+    </ul>
+	
+	<ul>
+  
+	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
+	</ul>
+  </div>
+ 
+  
+  
+  <div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2 style="text-align:center;color:green;">Time Provided</h2>
+    <ul class="price">
+    
 
-<div class="columns">
-  <ul class="price">
-    <li class="header" style="background-color:#4CAF50">Word Count/Pages</li>
-    <li class="grey">Number</li>
-    <li>5000</li>
-    <li>Full PHD Guidance</li>
-    <li>Not Applicable</li>
-    <li>Not Applicable</li>
-    <li class="grey"><a href="contact.html" class="button">Subscribe</a></li>
-  </ul>
-</div>
-
-<div class="columns">
-  <ul class="price">
-    <li class="header">Time Provided</li>
-    <li class="grey">Time</li>
+    
     <li>15 Days</li>
     <li>6 Months</li>
     <li>7 Days</li>
     <li>10 Days</li>
-    <li class="grey"><a href="contact.html" class="button">Subscribe</a></li>
-  </ul>
-</div>
-<!--Footer Start-->
-<div id="footer">
-<div class="container">
+    </ul>
+	
+	<ul>
+   
+	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
+	</ul>
+  </div>
+  
+  
+  
+  
+ <div class="row">
+  <div class="column" style="background-color:#aaa;">
+     <h2 style="text-align:center;color:green;">PAY</h2>
+    <ul class="price">
+    
+
+    
+    <li class="grey"><a href="checkout.php" class="button">PAY</a></li>
+     <li class="grey"><a href="checkout.php" class="button">PAY</a></li>
+     <li class="grey"><a href="checkout.php" class="button">PAY</a></li>
+     <li class="grey"><a href="checkout.php" class="button">PAY</a></li>
+    </ul>
+	
+	<ul>
+   
+	
+	</ul>
+  </div>
+  
+  
+  <h1 style="text-align:center;color:green;">Combo Pack Service</h1>
+
 <div class="row">
-<div class="col-md col-sm-6">
-<h4> Pages</h4>
-<ul>
-<li><a href="#">Research</a></li>
-<li><a href="contact.html">Contact Us</a></li>
-<li><a href="service.html">Services</a></li>
-<li><a href="service.html">PHD Guidance</a></li>
-</ul>
-<hr>
-<h4>User Section</h4>
-<ul>
-<li><a href="#">Login</a></li>
-<li><a href="#">Register</a></li>
-</ul>
-<hr class="hidden-md hidden-lg hidden-sm">
-</div>
-<div class="col-md-3 col-sm-6">
-<h4>Top Service Categories</h4>
-<ul>
-<li><a href="#"> Synopsis Plan</a></li>
-<li><a href="#"> PHD Guidance</a></li>
-<li><a href="#"> Survey Design</a></li>
-<li><a href="#"> Data Analysis</a></li>
-<li><a href="#"> Counsultancy</a></li>
+  <div class="column" style="background-color:#aaa;">
+    <h2 class="center">Services</h2>
+    <ul class="price">
+    
 
+    
+    <li style="color:#00FFFF;">(Topic And Synopsis Help+Questionnaire Design+Statistical Service)</li><br>
+    <li style="color:#D2691E;">PHD Guidance</li><br>
+     <li style="color:#7FFF00;">(Questionnaire Design+Statistical Service)</li>
+    <li style="color:#B8860B;">(Topic And Synopsis Help+Statistical Service)</li><br>
+    </ul>
+	
+	<ul>
+   
+	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
+	</ul>
+  </div>
+  <div class="row">
+  <div class="column" style="background-color:#aaa;">
+     <h2 style="text-align:center;color:green;">Price</h2>
+    <ul class="price">
+    
 
-</ul>
-<hr class="hidden-md hidden-lg">
+    
+    <li>25000 ₹</li><br><br><br>
+    <li>25000 ₹</li><br>
+    <li>12000 ₹</li><br><br><br>
+    <li>18000 ₹</li>
+    </ul>
+	
+	<ul>
+  
+	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
+	</ul>
+  </div>
+   <div class="row">
+  <div class="column" style="background-color:#aaa;">
+     <h2 style="text-align:center;color:green;">Time Provided</h2>
+    <ul class="price">
+    
 
-</div>
-<div class="col-md-3 col-sm-6">
-<h4>where to find us</h4>
-<p>
+    
+    <li>30 Days</li><br><br><br>
+    <li>6 Months</li><br>
+    <li>15 Days</li><br><br><br>
+    <li>20 Days</li>
+    </ul>
+	
+	<ul>
+   
+	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
+	</ul>
+  </div>
+  
+ <div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2 style="text-align:center;color:green;">PAY</h2>
+    <ul class="price">
+    
 
-<strong>Annovaresearch.com</strong>
-<br>Aliganj
-<br>Lucknow
-<br>Uttar Pradesh
-<br>vikashdeepak2014@gmail.com
-<br>+91 8887951971
-</p>
-<a href="contact.html">Go to contact us page</a>
-<hr class="hidden-md hidden-lg">
+    
+    <li class="grey"><a href="checkout.php" class="button">PAY</a></li><br><br><br>
+     <li class="grey"><a href="checkout.php" class="button">PAY</a></li><br>
+     <li class="grey"><a href="checkout.php" class="button">PAY</a></li><br><br><br>
+     <li class="grey"><a href="checkout.php" class="button">PAY</a></li>
+    </ul>
+	
+	<ul>
+   
+	
+	</ul>
+  </div>
+  <p>
+  
+   <h1 style="text-align:center;color:green;"></h1><br><br>
 
-</div>
-<div class="col-md-3 col-sm-6">
-<h4>Get the news</h4>
-<p class="text-muted">
-  subscribe here for getting news of Annova Research lucknow
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2 class="center">Services</h2>
+    <ul class="price">
+    
+
+    
+    <li style="color: yellow;font-size:30px;">Research Proposal</li>
+	(NGOs, Marketing & Social Research Studies)
+    <li style="color: yellow;font-size:30px;">Survey Design</li>
+	(Survey Planning, Tools & Techniques Selection & Data Collection)
+    <li style="color: yellow;font-size:30px;">Data Analysis</li>
+	(Analysis of Primary and Secondary Data)
+	(Using R, STATA, SPSS, MTLAB Softwares)
+	(Tabulation, Digrammatic Representation of Analyzed Data)
+     <li style="color: yellow;font-size:30px;">Report Writing</li>
+	(Final Draft Report)
+    </ul>
+	
+	<ul>
+   
+	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
+	</ul>
+  </div>
+  <div class="row">
+  <div class="column" style="background-color:#aaa;">
+     <h2 style="text-align:center;color:green;">Price</h2>
+    <ul class="price">
+    
+
+    
+    <li>20000 ₹</li></br><br>
+    <li>10000 ₹</li><br><br><br>
+    <li>15000 ₹</li><br><br><br><br>
+    <li>20000 ₹</li><br><br>
+    </ul>
+	
+	<ul>
+  
+	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
+	</ul>
+  </div>
+   <div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2 style="text-align:center;color:green;">Time Provided</h2>
+    <ul class="price">
+    
+
+    
+    <li>Not Applicable</li></br>
+    <li>Not Applicable</li><br><br><br>
+    <li>Not Applicable</li><br><br><br><br><br>
+    <li>Not Applicable</li><br><br>
+    </ul>
+	
+	<ul>
+   
+	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
+	</ul>
+  </div>
+  
+ <div class="row">
+  <div class="column" style="background-color:#aaa;">
+     <h2 style="text-align:center;color:green;">PAY</h2>
+    <ul class="price">
+    
+
+    
+    <li class="grey"><a href="checkout.php" class="button">PAY</a></li></br>
+     <li class="grey"><a href="checkout.php" class="button">PAY</a></li><br><br><br>
+     <li class="grey"><a href="checkout.php" class="button">PAY</a></li><br><br><br><br><br>
+     <li class="grey"><a href="checkout.php" class="button">PAY</a></li><br><br><br>
+    </ul>
+	
+	<ul>
+   
+	
+	
+  </div>
   </p>
-  <form action="" method="post">
-  <div class="input-group">
-  <input type="text" name="email" class="form-control">
-  <span class="input-group-btn">
-  <input type="submit" class="btn btn-default" value="subscribe">
   
-  </span>
   
-</div>
-</form>
-<hr>
-<h4>Stay In Touch</h4>
-<p class="social">
-<a href="#"><i class="fa fa-facebook"></i></a>
-<a href="#"><i class="fa fa-twitter"></i></a>
-<a href="#"><i class="fa fa-instagram"></i></a>
-<a href="#"><i class="fa fa-google-plus"></i></a>
-<a href="#"><i class="fa fa-envelope"></i></a>
-</p>
-</div>
-</div>
-</div>
-</div>
-<div id="copyright">
-<div class="container">
-<div class="col-md-6">
-<p class="pull-left">
-   &copy; 2020 annovaresearch.com
-   </p>
-   </div>
-   <div class="col-md-6">
-   <p class="pull-right">
-      Template By: <a href="www.Annovaresearch.com">Annovaresearch.com</a>
-	  </p>
-	  
-	  </div>
-	  </div>
-<!--Footer End-->
+  
+
+
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+
 </body>
 </html>
+
+
+<?php
+//Admin mail
+if(isset($_POST['submit'])){
+$name=$_POST['name'];
+$phone=$_POST['phone'];
+$email=$_POST['email'];
+$text=$_POST['text'];
+
+$insert_message="insert into message (name,phone,email,text) values('$name','$phone','$email','$text')";
+$data= mysqli_query($con,$insert_message);
+if($data)
+{
+	echo "Data Inserted";
+}
+else
+{
+	echo"All fields required";
+}
+
+}
+?>
