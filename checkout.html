@@ -146,11 +146,11 @@ include("functions/functions.php");
 	  <h2 style="text-align:center;margin-bottom:50px;">Service Subscription</h2>
 	  <div class="row">
 	  <div class="col-75">
-	  <div class="container">
+	  <div class="container" style="margin-left:50px;margin-right:80px;">
 	  <form action="">
 	  <div class="row">
 	  <div class="col-58">
-	  <h3 style="text-align:center;margin-bottom:50px;">Client_Details</h3>
+	  <h1 style="text-align:center;margin-bottom:50px;">Client_Details</h1>
 	  <label for="fname"><i class="fa-fa-user"></i>Full Name</label>
 	  <input type="text" id="fname" name="firstname" placeholder="Dr Vikas">
 	  
@@ -178,7 +178,7 @@ include("functions/functions.php");
 	  </div>
 	  </div>
 	  <div class="col-50">
-	  <h3> Basic Pack Service</h3>
+	  <h3> PHD Counsultation (Basic )</h3>
 	  <select name="text">
 	  <option value="">Select</option>
 <option value="">Topic And Synopsis Help</option>
@@ -201,10 +201,10 @@ include("functions/functions.php");
 	  
 	  <select name="amount">
 	  <option value="">Select</option>
-<option value="25000">10000</option>
-<option value="10000">25000</option>
-<option value="5000">5000</option>
-<option value="10000">10000</option>
+<option value="10000">10000/Topic And Synopsis Help</option>
+<option value="10000">25000/PHD Guidance</option>
+<option value="5000">5000/Questionnaire Design</option>
+<option value="10000">10000/Statistical Service</option>
 
 </select>
 <input type="submit" value="Pay Now">
@@ -213,17 +213,14 @@ include("functions/functions.php");
 	  
 	  
 	  
-<h3> Combo Pack Service</h3>
+<h3> PHD Counsultation (Premium)</h3>
 	  <select name="text">
 	  <option value="">Select</option>
 <option value="">(Topic And Synopsis Help+Questionnaire Design+Statistical Service)</option>
 <option value="">PHD Guidance</option>
 <option value="">(Questionnaire Design+Statistical Service)</option>
 <option value="">(Topic And Synopsis Help+Statistical Service)</option>
-<option value="">Research Proposal</option>
-<option value="">Survey Design</option>
-<option value="">Data Analysis</option>
-<option value="">Report Writing</option>
+
 </select>
 
 
@@ -240,10 +237,47 @@ include("functions/functions.php");
 	  </div>
 	  <select name="amount">
 	  <option value="">Select</option>
-<option value="25000">20000</option>
-<option value="10000">10000</option>
-<option value="5000">15000</option>
-<option value="10000">20000</option>
+<option value="required">25000/(Topic And Synopsis Help+Questionnaire Design+Statistical Service)</option>
+<option value="">25000/PHD Guidance</option>
+<option value="">12000/(Questionnaire Design+Statistical Service)</option>
+<option value="">15000/(Topic And Synopsis Help+Statistical Service)</option>
+
+</select>
+<input type="submit" value="Pay Now">
+	  
+	  <input type="checkbox" checked="checked" name="vikas">Shipping address same as billing</label>
+	  
+	  
+	  
+	  <h3> Technical Counsultation</h3>
+	  <select name="text">
+	  <option value="">Select</option>
+<option value="">Research Proposal (NGOs, Marketing & Social Research Studies)</option>
+<option value="">Survey Design (Survey Planning, Tools & Techniques Selection & Data Collection)</option>
+<option value="">Data Analysis (Analysis of Primary and Secondary Data)</option>
+<option value="">Report Writing (Final Draft Report)</option>
+
+</select>
+
+
+
+
+	  <div class="col-50">
+	  <h3>Payment</h3>
+	  <label for="fname">Accepted Payments</label>
+	  <div class="icon-container">
+	  <i class="fa fa-cc-visa" style="color:navy;"></i>
+	  <i class="fa fa-cc-amex" style="color:blue;"></i>
+	  <i class="fa fa-cc-mastercard" style="color:red;"></i>
+	  <i class="fa fa-cc-dis" style="color:orange;"></i>
+	  </div>
+	  <select name="amount">
+	  <option value="required">Select</option>
+	  <option value="">Select</option>
+<option value="">20000/Research Proposal (NGOs, Marketing & Social Research Studies)</option>
+<option value="">10000/Survey Design (Survey Planning, Tools & Techniques Selection & Data Collection)</option>
+<option value="">20000/Data Analysis (Analysis of Primary and Secondary Data)</option>
+<option value="">20000/Report Writing (Final Draft Report)</option>
 
 </select>
 <input type="submit" value="Pay Now">
