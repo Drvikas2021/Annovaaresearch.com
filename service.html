@@ -1,56 +1,63 @@
+<?php
+
+session_start();
+
+include("includes/db.php");
+include("functions/functions.php");
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Annova Research</title>
+	<title>Annova Research</title>
 	<meta charset="utf-8">
-  <link rel="stylesheet" href="styles/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles/style.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+<head>
 <style>
-* {
-  box-sizing: border-box;
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 100px;
 }
 
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-ul.price{
-	style: none;
+#customers th td:a{
 	
-	
-}
-h2.center{
-	text-align: center;
 	color: green;
 }
 
- ul > li{
-	
-	font-size:20px;
-	text-align: center;
-}
 
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
 </style>
 </head>
 <body>
-
 <div id="top">
    <div class="container">
    <div class="col-md-6 offer">
@@ -165,255 +172,236 @@ h2.center{
    </div>
      </div>
 	  </div>
-	 
 
-<h1 style="text-align:center;color:green;">Basic Pack Service</h1>
+<h1 style="text-align:center;margin-top:30px;">PHD Counsultation(Basic Pack)</h1>
 
+<table id="customers">
+  <tr>
+    <th>Service</th>
+    <th>Word Count Pages</th>
+    <th>Time Provided</th>
+	<th>Price</th>
+	<th>Subscription</th>
+  </tr>
+  <tr>
+    <td>Topic And Synopsis Help</td>
+    <td>1000</td>
+    <td>15 Days</td>
+	<td>Rs. 10000</td>
+	<td><a href="checkout.php" style="color:green;">Subscibe</td>
+	
+  </tr>
+  <tr>
+    <td>PHD Guidance</td>
+    <td>Full PHD Help</td>
+    <td>6 Months</td>
+	<td>Rs. 25000</td>
+	<td><a href="checkout.php" style="color:green;">Subscibe</td>
+  </tr>
+  <tr>
+    <td>Questionnaire Design</td>
+    <td>Not Applicable</td>
+    <td>7 Days</td>
+	<td>Rs. 5000</td>
+	<td><a href="checkout.php" style="color:green;">Subscibe</td>
+  </tr>
+  <tr>
+    <td>Statistical Service</td>
+    <td>Not Applicable</td>
+    <td>10 Days</td>
+	<td>Rs. 10000</td>
+	<td><a href="checkout.php" style="color:green;">Subscibe</td>
+  </tr>
+  
+    
+</table>
+<hr>
+
+<h1 style="text-align:center;margin-top:30px;">PHD Counsultation(Premium Pack)</h1>
+
+<table id="customers">
+  <tr>
+    <th>Service</th>
+    <th>Word Count Pages</th>
+    <th>Time Provided</th>
+	<th>Price</th>
+	<th>Subscription</th>
+  </tr>
+  <tr>
+    <td>(Topic And Synopsis Help+Questionnaire Design+Statistical Service)</td>
+    <td>Not Applicable</td>
+    <td>30 Days</td>
+	<td>Rs. 25000</td>
+	<td><a href="checkout.php" style="color:green;">Subscibe</td>
+	
+  </tr>
+  <tr>
+    <td>PHD Guidance</td>
+    <td>Full PHD Help</td>
+    <td>6 Months</td>
+	<td>Rs. 25000</td>
+	<td><a href="checkout.php" style="color:green;">Subscibe</td>
+  </tr>
+  <tr>
+    <td>(Questionnaire Design+Statistical Service)</td>
+    <td>Not Applicable</td>
+    <td>15 Days</td>
+	<td>Rs. 12000</td>
+	<td><a href="checkout.php" style="color:green;">Subscibe</td>
+  </tr>
+  <tr>
+    <td>(Topic And Synopsis Help+Statistical Service)</td>
+    <td>Not Applicable</td>
+    <td>20 Days</td>
+	<td>Rs. 15000</td>
+	<td><a href="checkout.php" style="color:green;">Subscibe</td>
+  </tr>
+  
+    
+</table>
+
+<hr>
+
+<h1 style="text-align:center;margin-top:30px;">Technical Counsultation</h1>
+
+<table id="customers">
+  <tr>
+    <th>Service</th>
+    <th>Word Count Pages</th>
+    <th>Time Provided</th>
+	<th>Price</th>
+	<th>Subscription</th>
+  </tr>
+  <tr>
+    <td>Research Proposal (NGOs, Marketing & Social Research Studies)</td>
+	
+    <td>Not Applicable</td>
+    <td>7 Days</td>
+	<td>Rs. 20000</td>
+	<td><a href="checkout.php" style="color:green;">Subscibe</td>
+	
+  </tr>
+  <tr>
+    <td>Survey Design
+(Survey Planning, Tools & Techniques Selection & Data Collection)</td>
+    <td>Not Applicable</td>
+    <td>Not Applicable</td>
+	<td>Rs. 10000</td>
+	<td><a href="checkout.php" style="color:green;">Subscibe</td>
+  </tr>
+  <tr>
+    <td>Data Analysis
+(Analysis of Primary and Secondary Data) (Using R, STATA, SPSS, MTLAB Softwares) (Tabulation, Digrammatic Representation of Analyzed Data)</td>
+    <td>Not Applicable</td>
+    <td>10 Days</td>
+	<td>Rs. 20000</td>
+	<td><a href="checkout.php" style="color:green;">Subscibe</td>
+  </tr>
+  <tr>
+    <td>Report Writing
+(Final Draft Report)</td>
+    <td>Not Applicable</td>
+    <td>Not Applicable</td>
+	<td>Rs. 20000</td>
+	<td><a href="checkout.php" style="color:green;">Subscibe</td>
+  </tr>
+  
+    
+</table>
+
+
+
+
+<div id="footer" style="margin-top:50px;">
+<div class="container">
 <div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2 class="center">Services</h2>
-    <ul class="price">
-    
+<div class="col-md col-sm-6">
+<h4> Pages</h4>
+<ul>
+<li><a href="#">Research</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="service.html">Services</a></li>
+<li><a href="service.html">PHD Guidance</a></li>
+</ul>
+<hr>
+<h4>User Section</h4>
+<ul>
+<li><a href="#">Login</a></li>
+<li><a href="#">Register</a></li>
+</ul>
+<hr class="hidden-md hidden-lg hidden-sm">
+</div>
+<div class="col-md-3 col-sm-6">
+<h4>Top Service Categories</h4>
+<ul>
+<li><a href="#"> Synopsis Plan</a></li>
+<li><a href="#"> PHD Guidance</a></li>
+<li><a href="#"> Survey Design</a></li>
+<li><a href="#"> Data Analysis</a></li>
+<li><a href="#"> Counsultancy</a></li>
 
-    
-    <li style="color:#00BFFF;">Topic And Synopsis Help</li>
-    <li style="color:#FF00FF;">PHD Guidance</li>
-    <li style="color:#FFD700;">Questionnaire Design</li>
-    <li style="color:#FFFACD;">Statistical Service</li>
-    </ul>
-	
-	<ul>
-   
-	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
-	</ul>
-  </div>
-  <div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2 style="text-align:center; color:green;">Price</h2>
-    <ul class="price">
-    
 
-    
-    <li>15000 ₹</li>
-    <li>25000 ₹</li>
-    <li>5000 ₹</li>
-    <li>10000 ₹</li>
-    </ul>
-	
-	<ul>
-  
-	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
-	</ul>
-  </div>
- 
-  
-  
-  <div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2 style="text-align:center;color:green;">Time Provided</h2>
-    <ul class="price">
-    
+</ul>
+<hr class="hidden-md hidden-lg">
 
-    
-    <li>15 Days</li>
-    <li>6 Months</li>
-    <li>7 Days</li>
-    <li>10 Days</li>
-    </ul>
-	
-	<ul>
-   
-	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
-	</ul>
-  </div>
-  
-  
-  
-  
- <div class="row">
-  <div class="column" style="background-color:#aaa;">
-     <h2 style="text-align:center;color:green;">PAY</h2>
-    <ul class="price">
-    
+</div>
+<div class="col-md-3 col-sm-6">
+<h4>where to find us</h4>
+<p>
 
-    
-    <li class="grey"><a href="checkout.html" class="button">PAY</a></li>
-    <li class="grey"><a href="checkout.html" class="button">PAY</a></li>
-    <li class="grey"><a href="checkout.html" class="button">PAY</a></li>
-     <li class="grey"><a href="checkout.html" class="button">PAY</a></li>
-    </ul>
-	
-	<ul>
-   
-	
-	</ul>
-  </div>
-  
-  
-  <h1 style="text-align:center;color:green;">Combo Pack Service</h1>
-
-<div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2 class="center">Services</h2>
-    <ul class="price">
-    
-
-    
-    <li style="color:#00FFFF;">(Topic And Synopsis Help+Questionnaire Design+Statistical Service)</li><br>
-    <li style="color:#D2691E;">PHD Guidance</li><br>
-     <li style="color:#7FFF00;">(Questionnaire Design+Statistical Service)</li>
-    <li style="color:#B8860B;">(Topic And Synopsis Help+Statistical Service)</li><br>
-    </ul>
-	
-	<ul>
-   
-	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
-	</ul>
-  </div>
-  <div class="row">
-  <div class="column" style="background-color:#aaa;">
-     <h2 style="text-align:center;color:green;">Price</h2>
-    <ul class="price">
-    
-
-    
-    <li>25000 ₹</li><br><br><br>
-    <li>25000 ₹</li><br>
-    <li>12000 ₹</li><br><br><br>
-    <li>18000 ₹</li>
-    </ul>
-	
-	<ul>
-  
-	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
-	</ul>
-  </div>
-   <div class="row">
-  <div class="column" style="background-color:#aaa;">
-     <h2 style="text-align:center;color:green;">Time Provided</h2>
-    <ul class="price">
-    
-
-    
-    <li>30 Days</li><br><br><br>
-    <li>6 Months</li><br>
-    <li>15 Days</li><br><br><br>
-    <li>20 Days</li>
-    </ul>
-	
-	<ul>
-   
-	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
-	</ul>
-  </div>
-  
- <div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2 style="text-align:center;color:green;">PAY</h2>
-    <ul class="price">
-    
-
-    
-    <li class="grey"><a href="checkout.html" class="button">PAY</a></li>PAY</a></li><br><br><br>
-     <li class="grey"><a href="checkout.html" class="button">PAY</a></li>PAY</a></li><br>
-     <li class="grey"><a href="checkout.html" class="button">PAY</a></li>PAY</a></li><br><br><br>
-     <li class="grey"><a href="checkout.html" class="button">PAY</a></li>PAY</a></li>
-    </ul>
-	
-	<ul>
-   
-	
-	</ul>
-  </div>
-  <p>
-  
-   <h1 style="text-align:center;color:green;"></h1><br><br>
-
-<div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2 class="center">Services</h2>
-    <ul class="price">
-    
-
-    
-    <li style="color: yellow;font-size:30px;">Research Proposal</li>
-	(NGOs, Marketing & Social Research Studies)
-    <li style="color: yellow;font-size:30px;">Survey Design</li>
-	(Survey Planning, Tools & Techniques Selection & Data Collection)
-    <li style="color: yellow;font-size:30px;">Data Analysis</li>
-	(Analysis of Primary and Secondary Data)
-	(Using R, STATA, SPSS, MTLAB Softwares)
-	(Tabulation, Digrammatic Representation of Analyzed Data)
-     <li style="color: yellow;font-size:30px;">Report Writing</li>
-	(Final Draft Report)
-    </ul>
-	
-	<ul>
-   
-	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
-	</ul>
-  </div>
-  <div class="row">
-  <div class="column" style="background-color:#aaa;">
-     <h2 style="text-align:center;color:green;">Price</h2>
-    <ul class="price">
-    
-
-    
-    <li>20000 ₹</li></br><br>
-    <li>10000 ₹</li><br><br><br>
-    <li>15000 ₹</li><br><br><br><br>
-    <li>20000 ₹</li><br><br>
-    </ul>
-	
-	<ul>
-  
-	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
-	</ul>
-  </div>
-   <div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2 style="text-align:center;color:green;">Time Provided</h2>
-    <ul class="price">
-    
-
-    
-    <li>Not Applicable</li></br>
-    <li>Not Applicable</li><br><br><br>
-    <li>Not Applicable</li><br><br><br><br><br>
-    <li>Not Applicable</li><br><br>
-    </ul>
-	
-	<ul>
-   
-	<li class="white"><a href="contact.html" class="button">Further-Enquiry</a></li>
-	</ul>
-  </div>
-  
- <div class="row">
-  <div class="column" style="background-color:#aaa;">
-     <h2 style="text-align:center;color:green;">PAY</h2>
-    <ul class="price">
-    
-
-    
-    <li class="grey"><a href="checkout.html" class="button">PAY</a></li>PAY</a></li></br>
-    <li class="grey"><a href="checkout.html" class="button">PAY</a></li>PAY</a></li><br><br><br>
-    <li class="grey"><a href="checkout.html" class="button">PAY</a></li>PAY</a></li><br><br><br><br><br>
-     <li class="grey"><a href="checkout.html" class="button">PAY</a></li>PAY</a></li><br><br><br>
-    </ul>
-	
-	<ul>
-   
-	
-	
-  </div>
+<strong><a href="https://drvikas2021.github.io/Annovaaresearch.com/">Annovaresearch.com</strong>
+<br>Aliganj
+<br>Lucknow
+<br>Uttar Pradesh
+<br>vikashdeepak2014@gmail.com
+<br>+91 8887951971
 </p>
-  
-  
-  
+<a href="contact.html">Go to contact us page</a>
+<hr class="hidden-md hidden-lg">
 
-
+</div>
+<div class="col-md-3 col-sm-6">
+<h4>Get the news</h4>
+<p class="text-muted">
+  subscribe here for getting news of Annova Research lucknow
+  </p>
+  <form action="" method="post">
+  <div class="input-group">
+  <input type="text" name="email" class="form-control">
+  <span class="input-group-btn">
+  <input type="submit" class="btn btn-default" value="subscribe">
+  
+  </span>
+  
+</div>
+</form>
+<hr>
+<h4>Stay In Touch</h4>
+<p class="social">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-google-plus"></i></a>
+<a href="#"><i class="fa fa-envelope"></i></a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="copyright">
+<div class="container">
+<div class="col-md-6">
+<p class="pull-left">
+   &copy; 2020 annovaresearch.com
+   </p>
+   </div>
+   <div class="col-md-6">
+   <p class="pull-right">
+      Template By: <a href=" https://drvikas2021.github.io/Annovaaresearch.com/">Annovaresearch.com</a>
+	  </p>
+	  
+	  </div>
+	  </div>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
@@ -423,25 +411,3 @@ h2.center{
 </body>
 </html>
 
-
-<?php
-//Admin mail
-if(isset($_POST['submit'])){
-$name=$_POST['name'];
-$phone=$_POST['phone'];
-$email=$_POST['email'];
-$text=$_POST['text'];
-
-$insert_message="insert into message (name,phone,email,text) values('$name','$phone','$email','$text')";
-$data= mysqli_query($con,$insert_message);
-if($data)
-{
-	echo "Data Inserted";
-}
-else
-{
-	echo"All fields required";
-}
-
-}
-?>
