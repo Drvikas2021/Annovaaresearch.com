@@ -14,6 +14,7 @@ include("functions/functions.php");
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles/style1.css">
 <link rel="stylesheet" href="styles/style.css">
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -24,6 +25,7 @@ include("functions/functions.php");
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+
 <body>
 
 <div id="top">
@@ -48,12 +50,11 @@ include("functions/functions.php");
    </ul>
    </div>
    </div>
-   
-<div class="navbar navbar-default" id="navbar">  <!--navbar navbar-default start-->
-   <div class="container">
+<nav class="navbar navbar-default navbar-fixed-top">
+ <div class="container">
    <div class="navbar-header">
    
-   <a class="navbar-brand home" href="index.html">
+   <a class="navbar-brand home" href="navbar.html">
    <img src="images/logo2.png" alt="Annova" class="hidden-xs">
    <img src="images/logo2.png" alt="Annova" class="visible-xs">
    </a>
@@ -116,32 +117,10 @@ include("functions/functions.php");
    
    </button>
    </div>
-   
-   <div class="collapse clearfix" id="search">
-   
-   
-   
-
- 
-<form class="navbar-form" method="get" action="" autocomplete="off">
-
-<div class="input-group">
-
-<input type="text" name="user_query" placeholder="Search" class="form-control" required="">
-<span class="input-group-btn">
-<button type="submit" value="Search" name="search" class="btn btn-primary">
-<i class="fa fa-search"></i>
-</button>
-</span>
 </div>
-</form>
+</nav>
 </div>
-   </div>
-   </div>
-     </div>
-	  </div>
-	 
-	  <div class="container">
+<div class="container">
             <div class="row">
 			<div class="col-xs-12 col-sm-12 col-lg-2" >
 			<center>
@@ -343,72 +322,15 @@ var x = setInterval(function() {
 <h2 class="text-center">Contact Us</h2>
 <div class="row">
 <div class="col-md-8">
-
- <form
-  action="https://formspree.io/vikashdeepak2014@gmail.com"
-  method="POST" autocomplete="off"
-  enctype="multipart/form-data"
->
- 
-  <input class="form-control" name="name" placeholder="Name"/><br/>
+<form action="contact.php" method="post">
+ <input class="form-control" name="name" placeholder="Name"/><br/>
  <input class="form-control" name="phone" placeholder="Phone"/><br/>
  <input class="form-control" name="email" placeholder="Email"/><br/>
  <input class="form-control" name="text" placeholder="How Can We Help You?"
  style="height:150px;"></textarea><br/>
  									
  <input class="btn btn-primary" type="submit" value="Send"/><br/><br/>
-</form>
-
-
-<!-- Place this script at the end of the body tag -->
-
-<script>
-  window.addEventListener("DOMContentLoaded", function() {
-
-    // get the form elements defined in your form HTML above
-    
-    var form = document.getElementById("my-form");
-    var button = document.getElementById("my-form-button");
-    var status = document.getElementById("my-form-status");
-
-    // Success and Error functions for after the form is submitted
-    
-    function success() {
-      form.reset();
-      button.style = "display: none ";
-      status.innerHTML = "Thanks!";
-    }
-
-    function error() {
-      status.innerHTML = "Oops! There was a problem.";
-    }
-
-    // handle the form submission event
-
-    form.addEventListener("submit", function(ev) {
-      ev.preventDefault();
-      var data = new FormData(form);
-      ajax(form.method, form.action, data, success, error);
-    });
-  });
-  
-  // helper function for sending an AJAX request
-
-  function ajax(method, url, data, success, error) {
-    var xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);
-      } else {
-        error(xhr.status, xhr.response, xhr.responseType);
-      }
-    };
-    xhr.send(data);
-  }
-</script>
+ </form>
 </div>
 
 
@@ -551,6 +473,34 @@ function closeForm() {
 
 </body>
 </html>
+
+
+<?php
+//Admin mail
+if(isset($_POST['submit'])){
+$name=$_POST['name'];
+$phone=$_POST['phone'];
+$email=$_POST['email'];
+$text=$_POST['text'];
+
+$insert_message="insert into message (name,phone,email,text) values('$name','$phone','$email','$text')";
+$data= mysqli_query($con,$insert_message);
+if($data)
+{
+	echo "Data Inserted";
+}
+else
+{
+	echo"All fields required";
+}
+
+}
+?>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+
+<html>
 
 
 <?php
