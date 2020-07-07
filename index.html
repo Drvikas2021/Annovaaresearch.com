@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="styles/style1.css">
-<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="fixed-navigation-bar.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -19,6 +19,7 @@
 
 <body>
 <header><img src="images/logo2.jpg"></header>
+
 
 <div id="top">
    <div class="container">
@@ -42,30 +43,13 @@
    </ul>
    </div>
    </div>
-<nav class="navbar navbar-default navbar-fixed-top">
- <div class="container">
-   <div class="navbar-header">
-   
-   <a class="navbar-brand home" href="navbar.html">
-   <img src="images/logo2.png" alt="Annova" class="hidden-xs">
-   <img src="images/logo2.png" alt="Annova" class="visible-xs">
-   </a>
-   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
-    <span class="sr-only">Toggle Navigation</span>
-	<i class="fa fa-align-justify"></i>
-   
-   </button>
-   <button type="button" class="navbar-togglele" data-toggle="navbar-toggle" data-target="#search">
-   <span class="sr-only"></span>
-   <i class="fa fa-search"></i>
-   
-   </button>
-</div>
-<div  class="navbar-collapse" id="navigation">
-   <div class="padding-nav">
-   <ul class="nav navbar-nav navbar-left" style="background-color:#ff9999;">
-   <li class="active">
-   <a href="index.html">Home</a>
+   <nav class="navbar navbar-default navbar-fixed-top">
+<div class="container">
+	
+<a class="toggleMenu" href="#">Menu</a>
+<ul class="nav">
+	<li  class="test">
+		<a href="index.html">Home</a>
    </li>
    <li>
    <a href="research.html">Research</a>
@@ -86,32 +70,20 @@
    
    
    
-   <li>
+  <li>
    <a href="contact.html">Contact Us</a>
    </li>
    
+   <li style="float:right">
+   <span><a href="#">Phone: 8887951971</a>
+   <a href="#">Email: vikashdeepak2014@gmail.com</a></span>
+   </li>
    
    
-   
-   </ul>
-   </div>
-   <a href="service.html" class="btn btn-primary navbar-btn right">
-   
-   <i class="fa fa-shopping.cart"></i>
-   <span>Service Price</span>
-   
-   </a>
-   <div class="navbar-collapse collapse right">
-   <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
-   
-   <span class="sr-only"> Toggle Search</span>
-   <i class="fa-fa-search"></i>
-   
-   </button>
-   </div>
+</ul>
 </div>
+
 </nav>
-</div>
 <div class="container">
             <div class="row">
 			<div class="col-xs-12 col-sm-12 col-lg-2" >
@@ -460,36 +432,7 @@ function closeForm() {
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-
-
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
-
-
-<?php
-//Admin mail
-if(isset($_POST['submit'])){
-$name=$_POST['name'];
-$phone=$_POST['phone'];
-$email=$_POST['email'];
-$text=$_POST['text'];
-
-$insert_message="insert into message (name,phone,email,text) values('$name','$phone','$email','$text')";
-$data= mysqli_query($con,$insert_message);
-if($data)
-{
-	echo "Data Inserted";
-}
-else
-{
-	echo"All fields required";
-}
-
-}
-?>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</body>
-
-<html>
