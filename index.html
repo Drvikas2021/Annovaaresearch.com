@@ -15,101 +15,75 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<style>
+body{
+	position: relative; /* required */
+    padding-top: 70px;	/* prevent content to go underneath the fixed navbar */
+}
+.navbar{
+	
+	background-color:#FF7F50 !important;
+	
+}
+
+.navbar a{
+	
+	color:#FFD700 !important;
+	font-size:22px;
+}
+
+
+</style>
+<script>
+$(document).ready(function(){
+    $("body").scrollspy({
+        target: "#myNavbar",
+        offset: 60
+    }) 
+});
+</script>	
+	
+	
 </head>
 
 <body>
 <header><img src="images/logo2.jpg"></header>
 
-<div id="top">
-   <div class="container">
-   <div class="col-md-6 offer">
-   <a href="#" class="btn btn-success btn-sm">
-   ANNOVA
-   </a>
-   <a href="#">Phone:8887951971</a>/<a href="#">vikashdeepak2014@gmail.com</a>
-   
-   </div>
-   <div class="col-md-6">
-   <ul class="menu">
-   <li>
-   <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-google-plus"></i></a>
-            <a href="#"><i class="fa fa-youtube-play"></i></a>
-            <a href="#"><i class="fa fa-rss"></i></a>
-   </li>
-   
-   </ul>
-   </div>
-   </div>
-<nav class="navbar navbar-default navbar-fixed-top">
- <div class="container">
-   <div class="navbar-header">
-   
-   <a class="navbar-brand home" href="navbar.html">
-   <img src="images/logo2.png" alt="Annova" class="hidden-xs">
-   <img src="images/logo2.png" alt="Annova" class="visible-xs">
-   </a>
-   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
-    <span class="sr-only">Toggle Navigation</span>
-	<i class="fa fa-align-justify"></i>
-   
-   </button>
-   <button type="button" class="navbar-togglele" data-toggle="navbar-toggle" data-target="#search">
-   <span class="sr-only"></span>
-   <i class="fa fa-search"></i>
-   
-   </button>
-</div>
-<div  class="navbar-collapse" id="navigation">
-   <div class="padding-nav">
-   <ul class="nav navbar-nav navbar-left" style="background-color:#ff9999;">
-   <li class="active">
-   <a href="index.html">Home</a>
-   </li>
-   <li>
-   <a href="research.html">Research</a>
-   </li>
-    <li>
-   <a href="policy.html">Policy Design</a>
-   </li>
-   
-   
-   
-   <li>
-   <a href="service.html">Services</a>
-   </li>
-   
-   <li>
-   <a href="about.html">About Us</a>
-   </li>
-   
-   
-   
-   <li>
-   <a href="contact.html">Contact Us</a>
-   </li>
-   
-   
-   
-   
-   </ul>
-   </div>
-   <a href="service.html" class="btn btn-primary navbar-btn right">
-   
-   <i class="fa fa-shopping.cart"></i>
-   <span>Service Price</span>
-   
-   </a>
-   <div class="navbar-collapse collapse right">
-   <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
-   
-   <span class="sr-only"> Toggle Search</span>
-   <i class="fa-fa-search"></i>
-   
-   </button>
-   </div>
-</div>
+<nav id="myNavbar" class="navbar navbar-expand-md navbar-dark bg-dark mb-3 fixed-top">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand mr-3">Annova Research</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="Index.html" class="nav-item nav-link active"><i class="fa fa-home"></i> Home</a>
+                <a href="research.html" class="nav-item nav-link"><i class="fa fa-database"></i>Research</a>
+				 <a href="policy.html" class="nav-item nav-link"><i class="fa fa-globe" aria-hidden="true"></i>Policy Design</a>
+				
+				
+                <a href="about.html" class="nav-item nav-link"><i class="fa fa-university"></i>About</a>
+                <a href="contact.html" class="nav-item nav-link"><i class="fa fa-envelope"></i> Contact Us</a>
+				<div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Service</button>
+        <div class="dropdown-menu">
+            <a href="service.html" class="dropdown-item">PHD Counsultation</a>
+            <a href="service.html" class="dropdown-item">Technical Counsultation</a>
+			<a href="service.html" class="dropdown-item">Research</a>
+			<a href="service.html" class="dropdown-item">Paper Publication</a>
+			</div>
+				
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a href="#" class="nav-item nav-link">Register</a>
+                <a href="#" class="nav-item nav-link">Login</a>
+            </div>
+			<form class="form-inline ml-auto">
+            <input type="text" class="form-control mr-sm-2" placeholder="Search">
+            <button type="submit" class="btn btn-outline-light">Search</button>
+        </form>
+        </div>
+    </div>    
 </nav>
 </div>
 <div class="container">
