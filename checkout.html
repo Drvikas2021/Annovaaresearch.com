@@ -1,317 +1,275 @@
-<?php
-
-session_start();
-
-
-include("includes/db.php");
-include("functions/functions.php");
-
-?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Annova Research</title>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="styles/style.css">
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Adding Bootstrap 4 ScrollSpy via JavaScript</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/style1.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
 
+
+
+<style>
+body{
+	position: relative; /* required */
+    padding-top: 70px;	/* prevent content to go underneath the fixed navbar */
+}
+.navbar{
+	
+	background-color:#FF7F50 !important;
+	
+}
+
+.navbar a{
+	
+	color:#6A5ACD !important;
+	font-size:22px;
+}
+
+.carousel-inner img {
+    width: 110%;
+    height: 100%;
+  }
+  .wrapper{
+     text-align:center;
+	 }
+
+</style>
+<script>
+$(document).ready(function(){
+    $("body").scrollspy({
+        target: "#myNavbar",
+        offset: 60
+    }) 
+});
+</script>
+</head>
+
+<script type="text/javascript">
+//Applies cascading behavior for the specified dropdowns 
+function applyCascadingDropdown(sourceId, targetId) { 
+  var source = document.getElementById(sourceId); 
+  var target = document.getElementById(targetId); 
+  if (source && target) { 
+    source.onchange = function() { 
+      displayOptionItemsByClass(target, source.value); 
+    } 
+    displayOptionItemsByClass(target, source.value); 
+  } 
+} 
+
+//hides dropdown boxes
+function ChangeDropdowns(value){
+  if(value=="1"){
+    document.getElementById('stuff').style.display='none';
+  }else if(value=="4"){
+    document.getElementById('stuff').style.display='block';
+  }
+}
+
+//Displays a subset of a dropdown's options 
+function displayOptionItemsByClass(selectElement, className) { 
+  if (!selectElement.backup) { 
+    selectElement.backup = selectElement.cloneNode(true); 
+  } 
+  var options = selectElement.getElementsByTagName("option"); 
+  for(var i=0, length=options.length; i<length; i++) { 
+    selectElement.removeChild(options[0]); 
+  } 
+  var options = selectElement.backup.getElementsByTagName("option"); 
+  for(var i=0, length=options.length; i<length; i++) { 
+    if (options[i].className==className) 
+      selectElement.appendChild(options[i].cloneNode(true)); 
+  } 
+} 
+
+//Binds dropdowns 
+function applyCascadingDropdowns() { 
+  applyCascadingDropdown("categories", "items"); 
+  applyCascadingDropdown("items", "stuff");
+//We could even bind items to another dropdown 
+//applyCascadingDropdown("items", "foo"); 
+} 
+
+function combine(info) {
+  var str = '';
+  str += document.getElementById('categories').value
+       + ' ' + document.getElementById('items').value
+       + ' ' + document.getElementById('stuff').value
+       + ' ' + info;
+  alert(str);
+}
+
+//execute when the page is ready 
+window.onload=applyCascadingDropdowns;
+
+</script>
+<script>
+   function validate()
+{
+if(document.form.items.selectedIndex=="")
+{
+alert ( "Please select Categories!");
+return false;
+}
+var sel = document.getElementById("id");
+
+
+if(document.form.categories.selectedIndex=="")
+{
+alert ( "Please select service!");
+return false;
+}
+var sel = document.getElementById("categories");
+
+
+
+//get the selected option
+var selectedText = sel.options[sel.selectedIndex].text;
+alert("You have selected : "+selectedText);
+return true;
+}
+</script>
+					                       
+
+
+
+
+<!--[if lt IE 8]>
+   <div style=' clear: both; text-align:center; position: relative;'>
+     <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+       <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+    </a>
+  </div>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/html5.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+<![endif]-->
 
 </head>
 <body>
-
-<div id="top">
-   <div class="container">
-   <div class="col-md-6 offer">
-   <a href="#" class="btn btn-success btn-sm">
-   ANNOVA
-   </a>
-   <a href="#">Phone:8887951971</a>/<a href="#">vikashdeepak2014@gmail.com</a>
-   
-   </div>
-   <div class="col-md-6">
-   <ul class="menu">
-   <li>
-   <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-google-plus"></i></a>
-            <a href="#"><i class="fa fa-youtube-play"></i></a>
-            <a href="#"><i class="fa fa-rss"></i></a>
-   </li>
-   
-   </ul>
-   </div>
-   </div>
-   
-<div class="navbar navbar-default" id="navbar">  <!--navbar navbar-default start-->
-   <div class="container">
-   <div class="navbar-header">
-   
-   <a class="navbar-brand home" href="index.html">
-   <img src="images/logo2.png" alt="Annova" class="hidden-xs">
-   <img src="images/logo2.png" alt="Annova" class="visible-xs">
-   </a>
-   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
-    <span class="sr-only">Toggle Navigation</span>
-	<i class="fa fa-align-justify"></i>
-   
-   </button>
-   <button type="button" class="navbar-togglele" data-toggle="navbar-toggle" data-target="#search">
-   <span class="sr-only"></span>
-   <i class="fa fa-search"></i>
-   
-   </button>
-</div>
-<div  class="navbar-collapse" id="navigation">
-   <div class="padding-nav">
-   <ul class="nav navbar-nav navbar-left" style="background-color:#ff9999;">
-   <li class="active">
-   <a href="index.html">Home</a>
-   </li>
-   <li>
-   <a href="research.html">Research</a>
-   </li>
-    <li>
-   <a href="policy.html">Policy Design</a>
-   </li>
-   
-   
-   
-   <li>
-   <a href="service.html">Services</a>
-   </li>
-   
-   <li>
-   <a href="about.html">About Us</a>
-   </li>
-   
-   
-   
-   <li>
-   <a href="contact.html">Contact Us</a>
-   </li>
-   
-   
-   
-   
-   </ul>
-   </div>
-   <a href="service.html" class="btn btn-primary navbar-btn right">
-   
-   <i class="fa fa-shopping.cart"></i>
-   <span>Service Price</span>
-   
-   </a>
-   <div class="navbar-collapse collapse right">
-   <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
-   
-   <span class="sr-only"> Toggle Search</span>
-   <i class="fa-fa-search"></i>
-   
-   </button>
-   </div>
-   
-   <div class="collapse clearfix" id="search">
-   
-   
-   
-
- 
-<form class="navbar-form" method="get" action="">
-
-<div class="input-group">
-
-<input type="text" name="user_query" placeholder="Search" class="form-control" required="">
-<span class="input-group-btn">
-<button type="submit" value="Search" name="search" class="btn btn-primary">
-<i class="fa fa-search"></i>
-</button>
-</span>
-</div>
-</form>
-</div>
-   </div>
-   </div>
-     </div>
-	  </div>
-	  
-	  <h2 style="text-align:center;margin-bottom:50px;">Service Subscription</h2>
-	  <div class="row">
-	  <div class="col-75">
-	  <div class="container" style="margin-left:50px;margin-right:80px;">
-	  <form action="">
-	  <div class="row">
-	  <div class="col-58">
-	  <h1 style="text-align:center;margin-bottom:50px;">Client_Details</h1>
-	  <label for="fname"><i class="fa-fa-user"></i>Full Name</label>
-	  <input type="text" id="fname" name="firstname" placeholder="Dr Vikas">
-	  
-	  <label for="email"><i class="fa-fa-envelope"></i>Email</label>
-	  <input type="text" id="email" name="email" placeholder="Dr Vikas@2015.com">
-	  
-	  <label for="adr"><i class="fa-fa-address-card-o"></i>Address</label>
-	  <input type="text" id="fname" name="firstname" placeholder="Dr Vikas">
-	  
-	 
-	  
-	  <label for="city"><i class="fa-fa-institution"></i>City</label>
-	  <input type="text" id="city" name="city" placeholder="Delhi">
-	  
-	  <div class="row">
-	  <div class="col-50">
-	  <label for="state">"State"</label>
-	  <input type="text" id="state" name="state" placeholder="PP">
-	  </div>
-	  
-	  <div class="col-50">
-	  <label for="state">"Postal Code"</label>
-	  <input type="text" id="zip" name="zip" placeholder="10301">
-	  </div>
-	  </div>
-	  </div>
-	  <div class="col-50">
-	  <h3> PHD Counsultation (Basic )</h3>
-	  <select name="text">
-	  <option value="">Select</option>
-<option value="">Topic And Synopsis Help</option>
-<option value="">PHD Guidance</option>
-<option value="">Questionnaire Design</option>
-<option value="">Statistical Service</option>
-
-</select>
-
-
-<div class="col-50">
-	  <h3>Payment</h3>
-	  <label for="fname">Accepted Payments</label>
-	  <div class="icon-container">
-	  <i class="fa fa-cc-visa" style="color:navy;"></i>
-	  <i class="fa fa-cc-amex" style="color:blue;"></i>
-	  <i class="fa fa-cc-mastercard" style="color:red;"></i>
-	  <i class="fa fa-cc-dis" style="color:orange;"></i>
-	  </div>
-	  
-	  <select name="amount">
-	  <option value="">Select</option>
-<option value="10000">10000/Topic And Synopsis Help</option>
-<option value="10000">25000/PHD Guidance</option>
-<option value="5000">5000/Questionnaire Design</option>
-<option value="10000">10000/Statistical Service</option>
-
-</select>
-<input type="submit" value="Pay Now">
-	  
-	  <input type="checkbox" checked="checked" name="vikas">Shipping address same as billing</label>
-	  
-	  
-	  
-<h3> PHD Counsultation (Premium)</h3>
-	  <select name="text">
-	  <option value="">Select</option>
-<option value="">(Topic And Synopsis Help+Questionnaire Design+Statistical Service)</option>
-<option value="">PHD Guidance</option>
-<option value="">(Questionnaire Design+Statistical Service)</option>
-<option value="">(Topic And Synopsis Help+Statistical Service)</option>
-
-</select>
+<nav id="myNavbar" class="navbar navbar-expand-md navbar-dark bg-dark mb-3 fixed-top">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand mr-3">Annova Research</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="index.html" class="nav-item nav-link active"><i class="fa fa-home"></i> Home</a>
+                <a href="research.html" class="nav-item nav-link"><i class="fa fa-database"></i>Research</a>
+				 <a href="policy.html" class="nav-item nav-link"><i class="fa fa-globe" aria-hidden="true"></i>Policy Design</a>
+				
+				
+                <a href="about.html" class="nav-item nav-link"><i class="fa fa-university"></i>About</a>
+                <a href="contact.html" class="nav-item nav-link"><i class="fa fa-envelope"></i> Contact Us</a>
+				<div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Service</button>
+        <div class="dropdown-menu">
+            <a href="service.html" class="dropdown-item">PHD Counsultation</a>
+            <a href="service.html" class="dropdown-item">Technical Counsultation</a>
+			<a href="service.html" class="dropdown-item">Research</a>
+			<a href="service.html" class="dropdown-item">Paper Publication</a>
+			</div>
+				
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a href="#" class="nav-item nav-link">Register</a>
+                <a href="#" class="nav-item nav-link">Login</a>
+            </div>
+			<form class="form-inline ml-auto">
+            <input type="text" class="form-control mr-sm-2" placeholder="Search">
+            <button type="submit" class="btn btn-outline-light">Search</button>
+        </form>
+        </div>
+    </div>    
+</nav>
 
 
 
 
-	  <div class="col-50">
-	  <h3>Payment</h3>
-	  <label for="fname">Accepted Payments</label>
-	  <div class="icon-container">
-	  <i class="fa fa-cc-visa" style="color:navy;"></i>
-	  <i class="fa fa-cc-amex" style="color:blue;"></i>
-	  <i class="fa fa-cc-mastercard" style="color:red;"></i>
-	  <i class="fa fa-cc-dis" style="color:orange;"></i>
-	  </div>
-	  <select name="amount">
-	  <option value="">Select</option>
-<option value="required">25000/(Topic And Synopsis Help+Questionnaire Design+Statistical Service)</option>
-<option value="">25000/PHD Guidance</option>
-<option value="">12000/(Questionnaire Design+Statistical Service)</option>
-<option value="">15000/(Topic And Synopsis Help+Statistical Service)</option>
+<div class="wrapper">				
+			<article class="grid_12">	
+				
+						<h1>Search By Service</h1>
+						<p>
+						<form name="form" method="post" action="payment.html" onSubmit="return validate()">
+						<table class="navbar" width="100%" border="0" cellpadding="5px">
+						 <tr>
+						  <td class="menuNormal" width="240">
+						   <label for="categories"><b>Service :</b></label><br/> 
+						<p style="margin-top:15px;margin-bottom:20px;">
+						<select  id="categories" name="categories" onchange="document.theform.showValue.value=this.value" width="20"> 
+										<option value="">Select Option </option>
+										<Option Value="PHD Counsultation Basic Pack">PHD Counsultation Basic Pack </Option>
+										<Option Value="PHD Counsultation Premium Pack">PHD Counsultation Premium Pack</Option>
+										<Option Value="Technical Counsultation">Technical Counsultation</Option>	
+										</select> 
+						</p>
+						  
+						   <label for="items"><b>Categories: </b></label> <br/> 
+							 <p style="margin-top:15px;margin-bottom:10px;">
+							 <select name="items" id="items"> 
+							 
+							 <Option Class="PHD Counsultation Basic Pack" Value="">Select Option </Option>
+							 <Option Class="PHD Counsultation Basic Pack" Value="Topic & Synopsis Help">Topic & Synopsis Help</Option> 
+								 <Option Class="PHD Counsultation Basic Pack" Value="Full PHD Guidance">Full PHD Guidance</Option> 
+								 <Option Class="PHD Counsultation Basic Pack" Value="Survey & Qustionnaire Design">Survey & Qustionnaire Design</Option> 
+									<Option Class="PHD Counsultation Basic Pack" Value="Statistical Assistance">Statistical Assistance</Option> 	
+									
+									
+									<Option Class="PHD Counsultation Premium Pack" Value="">Select Option </Option>
+									<Option Class="PHD Counsultation Premium Pack" Value="Topic And Synopsis Help+Questionnaire Design+Statistical Service">Topic And Synopsis Help+Questionnaire Design+Statistical Service </Option>
+									<Option Class="PHD Counsultation Premium Pack" Value="PHD Guidance">PHD Guidance </Option>
+									<Option Class="PHD Counsultation Premium Pack" Value="Questionnaire Design+Statistical Service">Questionnaire Design+Statistical Service </Option>
+									<Option Class="PHD Counsultation Premium Pack" Value="Topic And Synopsis Help+Statistical Service">Topic And Synopsis Help+Statistical Service</Option>
+									
+									
+									
+									
+									
+									<Option Class="Technical Counsultation" Value="">Select Option </Option>
+									<Option Class="Technical Counsultation" Value="Research Proposal (NGOs, Marketing & Social Research Studies)">Research Proposal (NGOs, Marketing & Social Research Studies) </Option>
+									<Option Class="Technical Counsultation" Value="Survey Design (Survey Planning, Tools & Techniques Selection & Data Collection)">Survey Design (Survey Planning, Tools & Techniques Selection & Data Collection) </Option>
+									<Option Class="Technical Counsultation" Value="Data Analysis (Analysis of Primary and Secondary Data) (Using R, STATA, SPSS, MATLAB Softwares)">Data Analysis (Analysis of Primary and Secondary Data) (Using R, STATA, SPSS, MATLAB Softwares) </Option>
+									<Option Class="Technical Counsultation" Value="Report Writing (Final Draft Report)">Report Writing (Final Draft Report) </Option>
 
-</select>
-<input type="submit" value="Pay Now">
-	  
-	  <input type="checkbox" checked="checked" name="vikas">Shipping address same as billing</label>
-	  
-	  
-	  
-	  <h3> Technical Counsultation</h3>
-	  <select name="text">
-	  <option value="">Select</option>
-<option value="">Research Proposal (NGOs, Marketing & Social Research Studies)</option>
-<option value="">Survey Design (Survey Planning, Tools & Techniques Selection & Data Collection)</option>
-<option value="">Data Analysis (Analysis of Primary and Secondary Data)</option>
-<option value="">Report Writing (Final Draft Report)</option>
-
-</select>
-
-
-
-
-	  <div class="col-50">
-	  <h3>Payment</h3>
-	  <label for="fname">Accepted Payments</label>
-	  <div class="icon-container">
-	  <i class="fa fa-cc-visa" style="color:navy;"></i>
-	  <i class="fa fa-cc-amex" style="color:blue;"></i>
-	  <i class="fa fa-cc-mastercard" style="color:red;"></i>
-	  <i class="fa fa-cc-dis" style="color:orange;"></i>
-	  </div>
-	  <select name="amount">
-	  <option value="required">Select</option>
-	  <option value="">Select</option>
-<option value="">20000/Research Proposal (NGOs, Marketing & Social Research Studies)</option>
-<option value="">10000/Survey Design (Survey Planning, Tools & Techniques Selection & Data Collection)</option>
-<option value="">20000/Data Analysis (Analysis of Primary and Secondary Data)</option>
-<option value="">20000/Report Writing (Final Draft Report)</option>
-
-</select>
-<input type="submit" value="Pay Now">
-	  
-	  <input type="checkbox" checked="checked" name="vikas">Shipping address same as billing</label>
-	  </div>
-	  </div>
-	  </div>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	    
-	 </form>
-	 
-	  
-	   
-	   
-	   
-	   </div>
-	   </div>
-	   </div>
-	  
-	 
-	 
-	  <!--Footer Start-->
+                                 </select>
+							</p>
+						  
+								   <label for="stuff"><b>Payment: </b></label> <br/> 
+										<p style="margin-top:15px;margin-bottom:10px;">
+										<select name="stuff" id="stuff"> 	
+										
+								 <Option  Class="Topic & Synopsis Help" Value="Rs 10000">Rs 10000</Option>
+								  <Option  Class="Full PHD Guidance" Value="Rs 25000">Rs 25000</Option>
+								   <Option  Class="Survey & Qustionnaire Design" Value="Rs 5000">Rs 5000</Option>
+								    <Option  Class="Statistical Assistance" Value="Rs 10000">Rs 10000</Option>
+									
+									<Option  Class="PHD Guidance" Value="Rs 25000">Rs 25000</Option>
+									
+									<Option  Class="Topic And Synopsis Help+Questionnaire Design+Statistical Service" Value="Rs 25000">Rs 25000</Option>
+									  <Option  Class="Questionnaire Design+Statistical Service" Value="Rs 12000">Rs 12000</Option>
+									 
+									 <Option  Class="Topic And Synopsis Help+Statistical Service" Value="Rs 15000">Rs 15000</Option>
+									 
+									 <Option  Class="Research Proposal (NGOs, Marketing & Social Research Studies)" Value="Rs 20000">Rs 20000</Option>
+									  <Option  Class="Survey Design (Survey Planning, Tools & Techniques Selection & Data Collection)" Value="Rs 10000">Rs 10000</Option>
+									  <Option  Class="Data Analysis (Analysis of Primary and Secondary Data) (Using R, STATA, SPSS, MATLAB Softwares)" Value="Rs 20000">Rs 20000</Option>
+									  <Option  Class="Report Writing (Final Draft Report)" Value="Rs 20000">Rs 20000</Option>
+									  </table>
+									  <input type="submit" name="Submit" value="Pay Now" style="float:left; margin-left:95px; color:green;">
+									  </form>
+									  
+									 
+				  <!--Footer Start-->
 <div id="footer">
 <div class="container">
 <div class="row">
@@ -403,44 +361,18 @@ include("functions/functions.php");
 	  </div>
 	  </div>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 
 
 
+
+
+</div>
 </body>
 </html>
-
-
-<?php
-//Admin mail
-if(isset($_POST['submit'])){
-$name=$_POST['name'];
-$phone=$_POST['phone'];
-$email=$_POST['email'];
-$text=$_POST['text'];
-
-$insert_message="insert into message (name,phone,email,text) values('$name','$phone','$email','$text')";
-$data= mysqli_query($con,$insert_message);
-if($data)
-{
-	echo "Data Inserted";
-}
-else
-{
-	echo"All fields required";
-}
-
-}
-?>
-
-	  
-	  
-	  
-	  
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-
-</body>
-</html>
-
+									  
+									  
+									  
+									  
+									  
+								 
