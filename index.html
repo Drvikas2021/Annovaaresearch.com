@@ -241,7 +241,7 @@ $(document).ready(function(){
 <h2 class="text-center">Contact Us</h2>
 <div class="row">
 <div class="col-md-8">
-<form  method="post" action="" autocomplete="off">
+<form  method="post" action="response.html" autocomplete="off">
 
  <input class="form-control" name="name" id="name" placeholder="Name"/><br/>
  <input class="form-control" name="phone" id="phone" placeholder="Phone"/><br/>
@@ -249,40 +249,8 @@ $(document).ready(function(){
  <input class="form-control" name="text" placeholder="How Can We Help You?"
  style="height:150px;"></textarea><br/>
  									
- <input class="btn btn-primary" type="submit" onclick="onclick"/><br/><br/>
+ <input class="btn btn-primary" type="submit"  value="submit"/>Submit<br/><br/>
  </form>
-
-
-	<script>
-function results(){
-var name = document.getElementById('name').value;
-var name = document.getElementById('phone').value;
-var email = document.getElementById('email').value;
-
-if (document.getElementById('poll1').checked){
-    poll = document.getElementById('poll1').value;
-	} else if(document.getElementById('poll2').checked){
-	 poll = document.getElementById('poll2').value;
-	 }else {
-	  poll = document.getElementById('poll3').value;
-	  }
-	  
-	  var comments = document.getElementByName('text').value;
-   document.write("<h1>Than You!</h1>);
-   document.write("<h1>we will contact you soon!</h1>);
-   document.write("<h1>here is your data!)</h1>;
-   
-   document.write(name+"<br/>");
-   document.write(email+"<br/>");
-  document.write(poll+"<br/>");
-  oncli
-   
-
-}
-
-</script>
-
-
 
 
 
