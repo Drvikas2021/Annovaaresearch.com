@@ -241,26 +241,51 @@ $(document).ready(function(){
 <h2 class="text-center">Contact Us</h2>
 <div class="row">
 <div class="col-md-8">
-<form onsubmit="return results();" method="post" action="response.html">
-
-<input id="name" type="text" name="name"/><br>
-
-<input id="email" type="text" name="email"/><br>
-
-
-<textarea id="comments" name="comments" rows="6" cols="40"></textarea><br>
-
-
-<input id="submit" type="submit" onclick="onclick"></button>
+<form onsubmit="return results();" method="post" action="response.html" autocomplete="off">
+ <input class="form-control" name="name" id="name" placeholder="Name"/><br/>
+ <input class="form-control" name="phone" id="phone" placeholder="Phone"/><br/>
+ <input class="form-control" name="email" id="email" placeholder="Email"/><br/>
+ <input class="form-control" name="text" placeholder="How Can We Help You?"
+ style="height:150px;"></textarea><br/>
+ 									
+ <input class="btn btn-primary" type="submit" onclick="onclick"/><br/><br/>
+ </form>
 
 
+	<script>
+function results(){
+var name = document.getElementById('name').value;
+var name = document.getElementById('phone').value;
+var email = document.getElementById('email').value;
+
+if (document.getElementById('poll1').checked){
+    poll = document.getElementById('poll1').value;
+	} else if(document.getElementById('poll2').checked){
+	 poll = document.getElementById('poll2').value;
+	 }else {
+	  poll = document.getElementById('poll3').value;
+	  }
+	  
+	  var comments = document.getElementByName('text').value;
+   document.write("<h1>Than You!</h1>);
+   document.write("<h1>we will contact you soon!</h1>);
+   document.write("<h1>here is your data!)</h1>;
+   
+   document.write(name+"<br/>");
+   document.write(email+"<br/>");
+  document.write(poll+"<br/>");
+  onclick="window.open('page1html', '_blank');"
+   
+
+}
+
+</script>
 
 
 
 
 
 
-</form>
 </div>
 
 
@@ -287,6 +312,8 @@ $(document).ready(function(){
     <button type="submit" class="btn">Send</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
+	
+
 </div>
 </div>
 
@@ -403,33 +430,6 @@ function closeForm() {
 
 
 </div>
-	<script>
-function results(){
-var name = document.getElementByName('name').value;
-var name = document.getElementByName('phone').value;
-var email = document.getElementByName('email').value;
-
-if (document.getElementById('poll1').checked){
-    poll = document.getElementById('poll1').value;
-	} else if(document.getElementById('poll2').checked){
-	 poll = document.getElementById('poll2').value;
-	 }else {
-	  poll = document.getElementById('poll3').value;
-	  }
-	  
-	  var comments = document.getElementByName('text').value;
-   document.write("<h1>Than You!</h1>);
-   document.write("<h1>we will contact you soon!</h1>);
-   document.write("<h1>here is your data!)</h1>;
-   
-   document.write(name+"<br/>");
-   document.write(email+"<br/>");
-  document.write(poll+"<br/>");
-  onclick="window.open('page1html', '_blank');"
-   
-
-}
-
-</script>
+	
 </body>
 </html>
