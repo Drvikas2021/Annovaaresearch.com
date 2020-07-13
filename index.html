@@ -241,15 +241,26 @@ $(document).ready(function(){
 <h2 class="text-center">Contact Us</h2>
 <div class="row">
 <div class="col-md-8">
-<form onsubmit="return results();" method="post" action="response.html" autocomplete="off">
- <input class="form-control" name="name" placeholder="Name"/><br/>
- <input class="form-control" name="phone" placeholder="Phone"/><br/>
- <input class="form-control" name="email" placeholder="Email"/><br/>
- <input class="form-control" name="text" placeholder="How Can We Help You?"
- style="height:150px;"></textarea><br/>
- 									
- <input class="btn btn-primary" type="submit" onclick="onclick"/><br/><br/>
- </form>
+<form onsubmit="return results();" method="post" action="response.html">
+
+<input id="name" type="text" name="name"/><br>
+
+<input id="email" type="text" name="email"/><br>
+
+
+<textarea id="comments" name="comments" rows="6" cols="40"></textarea><br>
+
+
+<input id="submit" type="submit" onclick="onclick"></button>
+
+
+
+
+
+
+
+
+</form>
 </div>
 
 
