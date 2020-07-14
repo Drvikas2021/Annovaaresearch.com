@@ -49,11 +49,11 @@ function validate() {
     // Retrieving the values of form elements 
     var name = document.contactForm.name.value;
     var email = document.contactForm.email.value;
-    var mobile = document.contactForm.mobile.value;
+    var phonee = document.contactForm.phone.value;
     
     
 	// Defining error variables with a default value
-    var nameErr = emailErr = mobileErr = true;
+    var nameErr = emailErr = phoneErr = true;
     
     // Validate name
     if(name == "") {
@@ -84,11 +84,11 @@ function validate() {
     
     // Validate mobile number
     if(mobile == "") {
-        printError("mobileErr", "Please enter your mobile number");
+        printError("phoneErr", "Please enter your mobile number");
     } else {
         var regex = /^[1-9]\d{9}$/;
         if(regex.test(mobile) === false) {
-            printError("mobileErr", "Please enter a valid 10 digit mobile number");
+            printError("phoneErr", "Please enter a valid 10 digit mobile number");
         } else{
             printError("mobileErr", "");
             mobileErr = false;
@@ -98,7 +98,7 @@ function validate() {
     
     
     // Prevent the form from being submitted if there are any errors
-    if((nameErr || emailErr || mobileErr ||) == true) {
+    if((nameErr ||phoneErr || emailErr ||) == true) {
        return false;
     } else {
         // Creating a string from input data for preview
