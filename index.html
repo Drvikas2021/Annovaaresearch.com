@@ -47,71 +47,50 @@ function printError(elemId, hintMsg) {
 // Defining a function to validate form 
 function validate() {
     // Retrieving the values of form elements 
-    var name = document.contactForm.name.value;
-    var email = document.contactForm.email.value;
-    var phonee = document.contactForm.phone.value;
-    
-    
-	// Defining error variables with a default value
-    var nameErr = emailErr = phoneErr = true;
-    
-    // Validate name
-    if(name == "") {
-        printError("nameErr", "Please enter your name");
-    } else {
-        var regex = /^[a-zA-Z\s]+$/;                
-        if(regex.test(name) === false) {
-            printError("nameErr", "Please enter a valid name");
-        } else {
-            printError("nameErr", "");
-            nameErr = false;
-        }
-    }
-    
-    // Validate email address
-    if(email == "") {
-        printError("emailErr", "Please enter your email address");
-    } else {
-        // Regular expression for basic email validation
-        var regex = /^\S+@\S+\.\S+$/;
-        if(regex.test(email) === false) {
-            printError("emailErr", "Please enter a valid email address");
-        } else{
-            printError("emailErr", "");
-            emailErr = false;
-        }
-    }
-    
-    // Validate mobile number
-    if(mobile == "") {
-        printError("phoneErr", "Please enter your mobile number");
-    } else {
-        var regex = /^[1-9]\d{9}$/;
-        if(regex.test(mobile) === false) {
-            printError("phoneErr", "Please enter a valid 10 digit mobile number");
-        } else{
-            printError("mobileErr", "");
-            mobileErr = false;
-        }
-    }
+    Function validate(){
+Var name = document.getElementById("name");
+Var phone = document.getElementById("phone");
+Var email= document.getElementById("email");
+If(name.value.trim()== "");
+{
+   Alert("Blank name");
+return false;
+}
+else if(phone.value.trim()== "")
+{
+  Alert("Blank phone");
+return false;
+}
+else if 
+Var regex = /^\(0-9)+$/
+if(test(regex.phone == false)
+{
+Alert("invalid phone number");
+else{
+Return true
+}
+else if(email.value.trim().lenght<5)
+{
+ Alert("password too short");
+return false;
+}
+else if
+Regex = new RegExp(/^\@\+$/)
+If (regex.test(email == false)
+{
+Alert("invalid password");
+}
+else{
+return true
+}
+else{
+return true;
+}
+
     
     
     
-    // Prevent the form from being submitted if there are any errors
-    if((nameErr ||phoneErr || emailErr ||) == true) {
-       return false;
-    } else {
-        // Creating a string from input data for preview
-        var dataPreview = "You've entered the following details: \n" +
-                          "Full Name: " + name + "\n" +
-                          "Email Address: " + email + "\n" +
-                          "Mobile Number: " + mobile + "\n" +
-                         
-        }
-        // Display input data in a dialog box before submitting the form
-        alert(dataPreview);
-    }
-};
+    
 </script>
 	
 <script>
