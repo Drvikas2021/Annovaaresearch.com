@@ -45,7 +45,7 @@ function printError(elemId, hintMsg) {
 }
 
 // Defining a function to validate form 
-function validateForm() {
+function validate() {
     // Retrieving the values of form elements 
     var name = document.contactForm.name.value;
     var email = document.contactForm.email.value;
@@ -318,15 +318,15 @@ $(document).ready(function(){
 <div class="row">
 <div class="col-md-8">
 <div class="container">
-<form name="contactForm"  method="post" action="" autocomplete="off">
+<form name="contactForm" onsubmit="return validate();" method="post" action="" autocomplete="off">
 
- <input class="form-control" name="name" id="name" placeholder="Name"/><br/>
+ <input class="form-control"  name="name" id="name" placeholder="Name"/><br/>
  <input class="form-control" name="phone" id="phone" placeholder="Phone"/><br/>
  <input class="form-control" name="email" id="email" placeholder="Email"/><br/>
  <input class="form-control" name="text" placeholder="How Can We Help You?"
  style="height:150px;"></textarea><br/>
  									
-	<a href="response.html" onclick="alert('Thank You, We will Contact You Soon!');">Submit</a>
+	<a href="response.html" onsubmit="alert('Thank You, We will Contact You Soon!');">Submit</a>
 
 
 
