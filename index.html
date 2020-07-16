@@ -307,7 +307,7 @@ $(document).ready(function(){
 	<form id="basic-form" action="response.html" method="post" autocomplete="off">
 	
     <p>
-      <label for="name">Name <span>(required, at least 3 characters)</span></label>
+      <label for="name">Name <span>(required)</span></label>
       <input id="name" name="name" minlength="3" type="text" required>
     </p>
     <p>
@@ -318,8 +318,8 @@ $(document).ready(function(){
       <input id="phone" type="number" name="phone" minlength="10" required>
     </p>
 	<p>	
-	<label for="text">Phone <span>(required)</span></label		
-	 <input class="form-control" name="text" placeholder="How Can We Help You?"
+	<label for="text">Message<span>(required)</span></label		
+	 <input id="text" name="text" type="text" required placeholder="How Can We Help You?"
  style="height:150px;"></textarea><br/>
 		</p><br>
 	<input class="submit" type="submit" value="SUBMIT">
