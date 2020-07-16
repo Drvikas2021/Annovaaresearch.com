@@ -12,6 +12,12 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="styles/style1.css">
 <link rel="stylesheet" type="text/css" href="styles/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+$(document).ready(function() {
+  $("#basic-form").validate();
+});
+</script>
 
 
 
@@ -297,15 +303,16 @@ $(document).ready(function(){
 <div class="row">
 <div class="col-md-8">
 <div class="container">
-<form name="contactForm" onsubmit="return validate();" method="post" action="" autocomplete="off">
 
- <input class="form-control"  name="name" id="name" placeholder="Name"/><br/>
- <input class="form-control" name="phone" id="phone" placeholder="Phone"/><br/>
- <input class="form-control" name="email" id="email" placeholder="Email"/><br/>
- <input class="form-control" name="text" placeholder="How Can We Help You?"
+	<form id="basic-form" action="response.html" method="post" autocomplete="off">
+	<input id="name" name="name" minlength="3" type="text" required></br>
+	<input id="email" type="email" name="email" required>
+	<input id="phone" type="number" name="phone" minlength="10" required>
+	 <input class="form-control" name="text" placeholder="How Can We Help You?"
  style="height:150px;"></textarea><br/>
- 									
-	<a href="response.html" onsubmit="alert('Thank You, We will Contact You Soon!');">Submit</a>
+	<input class="submit" type="submit" value="SUBMIT">
+	
+ 
 
 
 
