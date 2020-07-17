@@ -163,17 +163,13 @@ $(document).ready(function(){
 				});
 				
 				<!--Website must be a website -->
-				 $("input[name=moblie_no]").attr("maxlength", "10");
-  $('.moblie-no').keypress(function(e) {
-      var arr = [];
-      var kk = e.which;
-   
-      for (i = 48; i < 58; i++)
-          arr.push();
-   
-      if (!(arr.indexOf(kk)>=0))
-          e.preventDefault();
-  });
+				 $('#contact_phone').on('input', function() {
+	var input=$(this);
+	var re = /^[0-9]+)*$/;
+	var is_phone=re.test(input.val());
+	if(is_phone){input.removeClass("invalid").addClass("valid");}
+	else{input.removeClass("valid").addClass("invalid");}
+});
 				
 				<!--Message can't be blank -->
 				$('#contact_message').keyup(function(event) {
