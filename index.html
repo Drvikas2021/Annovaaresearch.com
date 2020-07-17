@@ -200,6 +200,98 @@ $(document).ready(function(){
 			
 		});
 	</script>
+	
+	<script src="js/bootstrap.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script> 
+    <script>
+  jQuery(document).ready(function($){
+    $('#reload').click(function(){
+    var d = new Date();	
+    $('#captcha_img').attr('src', 'Captcha/captcha.php?' + d.getTime());
+    });
+	
+    });
+    </script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script>
+  // When the browser is ready...
+  $(function() {
+  
+    // Setup form validation on the #register-form element
+    $("#request_quote").validate({
+    
+        // Specify the validation rules
+        rules: {
+            First_Name: "required",
+			Name: "required",
+			Subject: "required",
+            ccode: { digits:true },
+			acode: { digits:true },
+			Phone: { digits:true },
+			captcha: "required",
+            Email_Id: {
+                required: true,
+                email: true
+            },
+            password: {
+                required: true,
+                minlength: 5
+            },
+            agree: "required",
+			Field_of_Study: "required",
+			
+			Topic_of_study: "required",
+			
+			"Services[]":"required"
+			
+        },
+        
+        // Specify the validation error messages
+        messages: {
+            First_Name: "Please enter your first name",
+			Name: "Please enter your name",
+			Subject: "Please enter your subject",
+            ccode: {digits:"Please enter numeric value only"},
+			acode: {digits:"Please enter numeric value only"},
+			Phone: {digits:"Please enter numeric value only"},
+			captcha: "Please enter captcha code",
+            password: {
+                required: "Please provide a password",
+                minlength: "Your password must be at least 5 characters long"
+            },
+            Email_Id: "Please enter a valid email address",
+            agree: "Please accept our policy",
+			Field_of_Study:"Please enter field of study",
+			University_name: "Please enter university name",
+			Topic_of_study: "Please enter your topic of study",
+			Time_zone:"Please enter your time zone",
+			"Services[]":" Please select at least one service"
+        },
+		errorPlacement: function(error, element) {	
+			if(element.attr("name")=='Services[]'){
+				error.insertAfter(element.parent().parent().parent().parent());
+			}
+			else
+			{
+			   error.insertAfter(element);
+			}
+		},
+        
+        submitHandler: function(form) {
+           var v = grecaptcha.getResponse();
+   		 if(v.length == 0)
+   		 {   
+   		   $('#captcha').html('You can\'t leave Captcha Code');
+   		   return false;
+   		 } 
+
+            form.submit();
+        }
+    });
+	</script>
+	
+	
+	</head>
 <body>
 <nav id="myNavbar" class="navbar navbar-expand-md navbar-dark bg-dark mb-3 fixed-top">
     <div class="container-fluid">
