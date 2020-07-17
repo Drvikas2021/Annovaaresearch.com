@@ -403,7 +403,7 @@ $(document).ready(function(){
 <div class="col-md-8">
 <div class="container">
 
-	<form id="contact" method="post" action="response.html">
+	<form id="contact" method="post" action="response.html" autocomplete="off">
 			<!-- Name -->
 			<div>
 				<label for="contact_name">Name:</label>
@@ -430,7 +430,7 @@ $(document).ready(function(){
 			</div>					
 			<!-- Submit Button -->
 			<div id="contact_submit">				
-				<button type="submit">Submit</button>
+				<a href="response.html" onsubmit="alert('Thank You, We will Contact You Soon!');">Submit</a>
 			</div>
 		</form>
 </div>
