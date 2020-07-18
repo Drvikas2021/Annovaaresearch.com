@@ -1,0 +1,534 @@
+<!DOCKTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="assets/css/style1.css">
+  <title>Annova Research</title>
+  <style>
+  body{
+	position: relative; /* required */
+    padding-top: 70px;	/* prevent content to go underneath the fixed navbar */
+}
+.navbar{
+	
+	background-color:#FF7F50 !important;
+	
+}
+
+.navbar a{
+	
+	color:#6A5ACD !important;
+	font-size:22px;
+}
+
+</style>
+
+    
+    
+    
+    
+</script>
+	
+<script>
+$(document).ready(function(){
+    $("body").scrollspy({
+        target: "#myNavbar",
+        offset: 60
+    }) 
+});
+</script>
+  
+  <script type="text/javascript">
+  window.onload = function () {
+  
+ 
+
+var chart1 = new CanvasJS.Chart("chartContainer1",
+    {
+        animationEnabled: true,
+        title: {
+			text: "Trend in Corona Rise in India "
+		},
+		axisX: {
+			labelFormatter: function (e) {
+				return CanvasJS.formatDate( e.value, "DD MMM");
+			},
+			labelAngle: -20
+		},
+		axisY: {
+			includeZero: false
+		},
+		data: [
+		{
+			type: "spline",
+			dataPoints: [
+				{ x: new Date(2020, 2, 29), y: 1024 },
+				
+				{ x: new Date(2020, 3, 29), y: 33062 },
+				
+				{ x: new Date(2020, 4, 29), y: 138535 },
+				{ x: new Date(2020, 5, 29), y: 881846 }
+				
+				
+				
+              
+            ]
+        }
+        ]
+    });
+
+
+var chart2 = new CanvasJS.Chart("chartContainer2",
+    {
+        animationEnabled: true,
+        title: {
+            text: "Highest Corona Reported States"
+        },
+        axisX: {
+            interval: 5,
+			labelAngle: 45,
+        },
+        data: [
+        {
+            type: "column",
+            legendMarkerType: "triangle",
+            legendMarkerColor: "green",
+            color: "rgba(255,12,32,.3)",
+            showInLegend: true,
+            legendText: "India State wise corona by 17july-2020",
+            dataPoints: [
+                { x: 10, y: 38044, label: "Andhra Pradesh" },
+                { x: 15, y: 21764, label: "Bihar" },
+                { x: 20, y: 118645, label: "Delhi" },
+                { x: 25, y: 45481, label: "Gujrat" },
+                { x: 30, y: 51422, label: "Karnataka" },
+                { x: 35, y: 284281, label: "Maharastra" },
+                { x: 40, y: 27174, label: "Rajasthan" },
+                { x: 45, y: 156369, label: "Tamilnadu" },
+				{ x: 50, y: 41018, label: "Telengana" },
+                { x: 55, y: 26675, label: "Uttar Pradesh" },
+                { x: 60, y: 3982, label: "Uttarakhand" },
+				{ x: 65, y: 36117, label: "West Bengal" }
+				
+				
+				
+            ]
+        },
+        ]
+    });
+chart1.render();
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  chart2.render();
+
+}
+</script>
+<script type="text/javascript"  src="canvasjs.js"></script>
+
+</head>
+<body>
+  <header class="cd-main-header js-cd-main-header">
+    <div class="cd-logo-wrapper">
+      <a href="#0" class="cd-logo"><img src="assets/img/logo2.jpg" alt="Logo"></a>
+    </div>
+    
+    <div class="cd-search js-cd-search">
+      <form>
+        <input class="reset" type="search" placeholder="Search...">
+      </form>
+    </div>
+  
+    <button class="reset cd-nav-trigger js-cd-nav-trigger" aria-label="Toggle menu"><span></span></button>
+  
+    <ul class="cd-nav__list js-cd-nav__list">
+	<li class="cd-nav__item"><a href="dashboard1.html">Dashboard</a></li>
+      <li class="cd-nav__item"><a href="index.html">Home</a></li>
+      <li class="cd-nav__item"><a href="research.html">Research</a></li>
+	  <li class="cd-nav__item"><a href="service.html">Service</a></li>
+	  <li class="cd-nav__item"><a href="about.html">About</a></li>
+	  <li class="cd-nav__item"><a href="contact.html">Contact Us</a></li>
+      <li class="cd-nav__item cd-nav__item--has-children cd-nav__item--account js-cd-item--has-children">
+        <a href="#0">
+          <img src="assets/img/logo2.jpg" alt="avatar">
+          <span>Account</span>
+        </a>
+    
+        <ul class="cd-nav__sub-list">
+          <li class="cd-nav__sub-item"><a href="#0">My Account</a></li>
+          <li class="cd-nav__sub-item"><a href="#0">Edit Account</a></li>
+          <li class="cd-nav__sub-item"><a href="#0">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </header> <!-- .cd-main-header -->
+  
+  <main class="cd-main-content">
+    <nav class="cd-side-nav js-cd-side-nav">
+      <ul class="cd-side__list js-cd-side__list">
+        <li class="cd-side__label"><span>Main</span></li>
+        <li class="cd-side__item cd-side__item--has-children cd-side__item--overview js-cd-item--has-children">
+          <a href="dashboard1.html">Data Tabels</a>
+          
+          <ul class="cd-side__sub-list">
+            <li class="cd-side__sub-item"><a href="dashboard1.html">All Tables & Charts</a></li>
+            <li class="cd-side__sub-item"><a href="#0">Indian Economy </a></li>
+            <li class="cd-side__sub-item"><a href="#0">World Economy</a></li>
+          </ul>
+        </li>
+
+        
+    
+       
+	  <li class="cd-side__item cd-side__item--has-children cd-side__item--notifications cd-side__item--selected js-cd-item--has-children">
+          <a href="#0">Latest Updates<span class="cd-count">3</span></a>
+          
+          <ul class="cd-side__sub-list">
+            <li class="cd-side__sub-item"><a aria-current="page" href="#0">Reports & Blogs</a></li>
+            <li class="cd-side__sub-item"><a href="#0">Indian Economy</a></li>
+            <li class="cd-side__sub-item"><a href="#0">World Economy</a></li>
+          </ul>
+        </li>
+    
+      <ul class="cd-side__list js-cd-side__list">
+        <li class="cd-side__label"><span>Action</span></li>
+        <li class="cd-side__btn"><button class="reset" href="#0">+ Button</button></li>
+      </ul>
+    </nav>
+  
+    <div class="cd-content-wrapper">
+      <div class="text-component text-center">
+        <div>
+	<h1 style="color:green; font-size:40px; text-align:center;">Dash Board</h1>
+	<h1 style="color:blue; font-size:30px; text-align:center;">July:2020</h1>
+	</div>
+	
+		
+<div id="chartContainer1" style="width: 45%; height: 300px;display: inline-block;"></div> 
+<div id="chartContainer2" style="width: 45%; height: 300px;display: inline-block;"></div><br/>
+
+<!-- Table with panel -->
+<div class="card card-cascade narrower">
+
+  <!--Card image-->
+  <div
+    class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+
+    <div>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <i class="fas fa-th-large mt-0"></i>
+      </button>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <i class="fas fa-columns mt-0"></i>
+      </button>
+    </div>
+
+    <a href="" class="white-text mx-3">World Major Countries Corona Spread</a>
+
+    <div>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <i class="fas fa-pencil-alt mt-0"></i>
+      </button>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <i class="far fa-trash-alt mt-0"></i>
+      </button>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <i class="fas fa-info-circle mt-0"></i>
+      </button>
+    </div>
+
+  </div>
+  <!--/Card image-->
+
+  <div class="px-4">
+
+    <div class="table-wrapper">
+      <!--Table-->
+      <table class="table table-hover mb-0">
+
+        <!--Table head-->
+        <thead>
+          <tr>
+            <th>
+              <input class="form-check-input" type="checkbox" id="checkbox">
+              <label class="form-check-label" for="checkbox" class="mr-2 label-table"></label>
+            </th>
+            <th class="th-lg">
+              <a>Countries
+                <i class="fas fa-sort ml-1"></i>
+              </a>
+            </th>
+            <th class="th-lg">
+              <a href="">Cases
+                <i class="fas fa-sort ml-1"></i>
+              </a>
+            </th>
+            <th class="th-lg">
+              <a href="">Deaths
+                <i class="fas fa-sort ml-1"></i>
+              </a>
+            </th>
+            
+            
+        </thead>
+        <!--Table head-->
+
+        <!--Table body-->
+        <tbody>
+          <tr>
+            <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox1">
+              <label class="form-check-label" for="checkbox1" class="label-table"></label>
+            </th>
+            <td>United States</td>
+            <td>3,770,012</td>
+            <td>142,064</td>
+            
+            
+			
+			
+			
+			
+          </tr>
+          <tr>
+            <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox2">
+              <label class="form-check-label" for="checkbox2" class="label-table"></label>
+            </th>
+            <td>Brazil</td>
+            <td>2,048,697</td>
+            <td>77,932</td>
+            
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox3">
+              <label class="form-check-label" for="checkbox3" class="label-table"></label>
+            </th>
+            <td>India</td>
+            <td>1,040,457</td>
+            <td>26,285</td>
+			
+            
+          </tr>
+          <tr>
+            <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox4">
+              <label class="form-check-label" for="checkbox4" class="label-table"></label>
+            </th>
+            <td>Russia</td>
+            <td>759,203</td>
+            <td>12,123</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox5">
+              <label class="form-check-label" for="checkbox5" class="label-table"></label>
+            </th>
+            <td>Peru</td>
+            <td>345,537</td>
+            <td>12,799</td>
+           
+          </tr>
+		  
+		  <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox5">
+              <label class="form-check-label" for="checkbox5" class="label-table"></label>
+            </th>
+            <td>South Africa</td>
+            <td>337,594</td>
+            <td>4,804</td>
+			
+           
+          </tr>
+		  
+		  <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox5">
+              <label class="form-check-label" for="checkbox5" class="label-table"></label>
+            </th>
+            <td>Mexico</td>
+            <td>331,298</td>
+            <td>38,310</td>
+           
+          </tr>
+		  
+		  <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox5">
+              <label class="form-check-label" for="checkbox5" class="label-table"></label>
+            </th>
+            <td>Chile</td>
+            
+            <td>326,539</td>
+			<td>8,347</td>
+           
+          </tr>
+		  
+		  
+		  <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox5">
+              <label class="form-check-label" for="checkbox5" class="label-table"></label>
+            </th>
+            <td>Spain</td>
+            <td>307,335</td>
+            <td>28,420</td>
+           
+          </tr>
+		  
+		  <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox5">
+              <label class="form-check-label" for="checkbox5" class="label-table"></label>
+            </th>
+            <td>United Kingdom</td>
+            <td>293,239</td>
+            <td>45,233</td>
+           
+          </tr>
+		  
+		  <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox5">
+              <label class="form-check-label" for="checkbox5" class="label-table"></label>
+            </th>
+            <td>Iran</td>
+            
+            <td>269,440</td>
+			<td>13,791</td>
+			
+			
+           
+          </tr>
+		  
+		  
+		  
+		  
+		  
+        </tbody>
+        <!--Table body-->
+      </table>
+      <!--Table-->
+    </div>
+
+  </div>
+
+</div>
+<!-- Table with panel -->
+
+
+<!--Footer Start-->
+<div id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md col-sm-6">
+<h4> Pages</h4>
+<ul>
+<li><a href="#">Research</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="service.html">Services</a></li>
+<li><a href="service.html">PHD Guidance</a></li>
+</ul>
+<hr>
+<h4>User Section</h4>
+<ul>
+<li><a href="#">Login</a></li>
+<li><a href="#">Register</a></li>
+</ul>
+<hr class="hidden-md hidden-lg hidden-sm">
+</div>
+<div class="col-md-3 col-sm-6">
+<h4>Top Service Categories</h4>
+<ul>
+<li><a href="#"> Synopsis Plan</a></li>
+<li><a href="#"> PHD Guidance</a></li>
+<li><a href="#"> Survey Design</a></li>
+<li><a href="#"> Data Analysis</a></li>
+<li><a href="#"> Counsultancy</a></li>
+
+
+</ul>
+<hr class="hidden-md hidden-lg">
+
+</div>
+<div class="col-md-3 col-sm-6">
+<h4>where to find us</h4>
+<p>
+
+<strong><a href="https://drvikas2021.github.io/Annovaaresearch.com/">Annovaresearch.com</strong>
+<br>Aliganj
+<br>Lucknow
+<br>Uttar Pradesh
+<br>vikashdeepak2014@gmail.com
+<br>+91 8887951971
+</p>
+<a href="contact.html">Go to contact us page</a>
+<hr class="hidden-md hidden-lg">
+
+</div>
+<div class="col-md-3 col-sm-6">
+<h4>Get the news</h4>
+<p class="text-muted">
+  subscribe here for getting news of Annova Research lucknow
+  </p>
+  <form action="" method="post">
+  <div class="input-group">
+  <input type="text" name="email" class="form-control">
+  <span class="input-group-btn">
+  <input type="submit" class="btn btn-default" value="subscribe">
+  
+  </span>
+  
+</div>
+</form>
+<hr>
+<h4>Stay In Touch</h4>
+<p class="social">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-google-plus"></i></a>
+<a href="#"><i class="fa fa-envelope"></i></a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="copyright">
+<div class="container">
+<div class="col-md-6">
+<p class="pull-left">
+   &copy; 2020 annovaresearch.com
+   </p>
+   </div>
+   <div class="col-md-6">
+   <p class="pull-right">
+      Template By: <a href=" https://drvikas2021.github.io/Annovaaresearch.com/">Annovaresearch.com</a>
+	  </p>
+	  
+	  </div>
+	  </div>
+
+
+
+	
+   <!-- .cd-main-content -->
+  <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+  <script src="assets/js/menu-aim.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
