@@ -84,7 +84,8 @@ var chart1 = new CanvasJS.Chart("chartContainer1",
 				
 				{ x: new Date(2020, 4, 29), y: 138535 },
 				{ x: new Date(2020, 5, 12), y: 881846 },
-				{ x: new Date(2020, 6, 18), y: 1038716 }
+				{ x: new Date(2020, 6, 18), y: 1038716 },
+				{ x: new Date(2020, 6, 28), y:  }
 				
 				
 				
@@ -112,7 +113,7 @@ var chart2 = new CanvasJS.Chart("chartContainer2",
             legendMarkerColor: "green",
             color: "rgba(255,12,32,.3)",
             showInLegend: true,
-            legendText: "India State wise corona by 17july-2020",
+            legendText: "India State wise corona by 18july-2020",
             dataPoints: [
                 { x: 10, y: 38044, label: "Andhra Pradesh" },
                 { x: 15, y: 21764, label: "Bihar" },
@@ -210,6 +211,214 @@ chart1.render();
 		
 <div id="chartContainer1" style="width: 45%; height: 300px;display: inline-block;"></div> 
 <div id="chartContainer2" style="width: 45%; height: 300px;display: inline-block;"></div><br/>
+			
+			<!-- Table with panel -->
+<div class="card card-cascade narrower">
+
+  <!--Card image-->
+  <div
+    class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+
+    <div>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <i class="fas fa-th-large mt-0"></i>
+      </button>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <i class="fas fa-columns mt-0"></i>
+      </button>
+    </div>
+
+    <a href="" class="white-text mx-3">World Major Countries Corona Spread</a>
+
+    <div>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <i class="fas fa-pencil-alt mt-0"></i>
+      </button>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <i class="far fa-trash-alt mt-0"></i>
+      </button>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <i class="fas fa-info-circle mt-0"></i>
+      </button>
+    </div>
+
+  </div>
+  <!--/Card image-->
+
+  <div class="px-4">
+
+    <div class="table-wrapper">
+      <!--Table-->
+      <table class="table table-hover mb-0">
+
+        <!--Table head-->
+        <thead>
+          <tr>
+            <th>
+              <input class="form-check-input" type="checkbox" id="checkbox">
+              <label class="form-check-label" for="checkbox" class="mr-2 label-table"></label>
+            </th>
+            <th class="th-lg">
+              <a>Countries
+                <i class="fas fa-sort ml-1"></i>
+              </a>
+            </th>
+            <th class="th-lg">
+              <a href="">Cases
+                <i class="fas fa-sort ml-1"></i>
+              </a>
+            </th>
+            <th class="th-lg">
+              <a href="">Deaths
+                <i class="fas fa-sort ml-1"></i>
+              </a>
+            </th>
+            
+            
+        </thead>
+        <!--Table head-->
+
+        <!--Table body-->
+        <tbody>
+          <tr>
+            <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox1">
+              <label class="form-check-label" for="checkbox1" class="label-table"></label>
+            </th>
+            <td>United States</td>
+            <td>3,770,012</td>
+            <td>142,064</td>
+            
+            
+			
+			
+			
+			
+          </tr>
+          <tr>
+            <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox2">
+              <label class="form-check-label" for="checkbox2" class="label-table"></label>
+            </th>
+            <td>Brazil</td>
+            <td>2,048,697</td>
+            <td>77,932</td>
+            
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox3">
+              <label class="form-check-label" for="checkbox3" class="label-table"></label>
+            </th>
+            <td>India</td>
+            <td>1,040,457</td>
+            <td>26,285</td>
+			
+            
+          </tr>
+          <tr>
+            <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox4">
+              <label class="form-check-label" for="checkbox4" class="label-table"></label>
+            </th>
+            <td>Russia</td>
+            <td>759,203</td>
+            <td>12,123</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox5">
+              <label class="form-check-label" for="checkbox5" class="label-table"></label>
+            </th>
+            <td>Peru</td>
+            <td>345,537</td>
+            <td>12,799</td>
+           
+          </tr>
+		  
+		  <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox5">
+              <label class="form-check-label" for="checkbox5" class="label-table"></label>
+            </th>
+            <td>South Africa</td>
+            <td>337,594</td>
+            <td>4,804</td>
+			
+           
+          </tr>
+		  
+		  <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox5">
+              <label class="form-check-label" for="checkbox5" class="label-table"></label>
+            </th>
+            <td>Mexico</td>
+            <td>331,298</td>
+            <td>38,310</td>
+           
+          </tr>
+		  
+		  <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox5">
+              <label class="form-check-label" for="checkbox5" class="label-table"></label>
+            </th>
+            <td>Chile</td>
+            
+            <td>326,539</td>
+			<td>8,347</td>
+           
+          </tr>
+		  
+		  
+		  <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox5">
+              <label class="form-check-label" for="checkbox5" class="label-table"></label>
+            </th>
+            <td>Spain</td>
+            <td>307,335</td>
+            <td>28,420</td>
+           
+          </tr>
+		  
+		  <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox5">
+              <label class="form-check-label" for="checkbox5" class="label-table"></label>
+            </th>
+            <td>United Kingdom</td>
+            <td>293,239</td>
+            <td>45,233</td>
+           
+          </tr>
+		  
+		  <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox5">
+              <label class="form-check-label" for="checkbox5" class="label-table"></label>
+            </th>
+            <td>Iran</td>
+            
+            <td>269,440</td>
+			<td>13,791</td>
+			
+			
+           
+          </tr>
+		  
+		  
+		  
+		  
+		  
+        </tbody>
+        <!--Table body-->
+      </table>
+      <!--Table-->
+    </div>
+
+  </div>
+
+</div>
+<!-- Table with panel -->
+
 			
 			<!--Footer Start-->
 <div id="footer">
