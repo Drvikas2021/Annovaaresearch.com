@@ -18,6 +18,39 @@
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" href="styles/style1.css">
   <title>Annova Research</title>
+	<style>
+  body{
+	position: relative; /* required */
+    padding-top: 70px;	/* prevent content to go underneath the fixed navbar */
+}
+.navbar{
+	
+	background-color:#FF7F50 !important;
+	
+}
+
+.navbar a{
+	
+	color:#6A5ACD !important;
+	font-size:22px;
+}
+
+</style>
+
+    
+    
+    
+    
+</script>
+	
+<script>
+$(document).ready(function(){
+    $("body").scrollspy({
+        target: "#myNavbar",
+        offset: 60
+    }) 
+});
+</script>
   
   <script type="text/javascript">
   window.onload = function () {
