@@ -83,9 +83,8 @@ var chart1 = new CanvasJS.Chart("chartContainer1",
 				{ x: new Date(2020, 3, 29), y: 33062 },
 				
 				{ x: new Date(2020, 4, 29), y: 138535 },
-				{ x: new Date(2020, 5, 12), y: 881846 },
-				{ x: new Date(2020, 6, 18), y: 1038716 }
 				
+				{ x: new Date(2020, 6, 19), y: 373379 }
 				
 				
 				
@@ -96,44 +95,93 @@ var chart1 = new CanvasJS.Chart("chartContainer1",
     });
 
 
-var chart2 = new CanvasJS.Chart("chartContainer2",
-    {
-        animationEnabled: true,
-        title: {
-            text: "Highest Corona Reported States"
-        },
-        axisX: {
+var chart2 = new CanvasJS.Chart("chartContainer2", {
+	exportEnabled: true,
+	animationEnabled: true,
+	title:{
+		text: "Highest Corona Reported States"
+	},
+	subtitles: [{
+		text: "confirmed and Recovered Rate (by July 19:2020)"
+	}], 
+	axisX: {
             interval: 5,
 			labelAngle: 45,
         },
-        data: [
-        {
-            type: "column",
-            legendMarkerType: "triangle",
-            legendMarkerColor: "green",
-            color: "rgba(255,12,32,.3)",
-            showInLegend: true,
-            legendText: "India State wise corona by 18july-2020",
-            dataPoints: [
-                { x: 10, y: 38044, label: "Andhra Pradesh" },
-                { x: 15, y: 21764, label: "Bihar" },
-                { x: 20, y: 118645, label: "Delhi" },
-                { x: 25, y: 45481, label: "Gujrat" },
-                { x: 30, y: 51422, label: "Karnataka" },
-                { x: 35, y: 284281, label: "Maharastra" },
-                { x: 40, y: 27174, label: "Rajasthan" },
-                { x: 45, y: 156369, label: "Tamilnadu" },
-				{ x: 50, y: 41018, label: "Telengana" },
-                { x: 55, y: 26675, label: "Uttar Pradesh" },
-                { x: 60, y: 3982, label: "Uttarakhand" },
-				{ x: 65, y: 36117, label: "West Bengal" }
-				
-				
-				
-            ]
-        },
-        ]
-    });
+	axisY: {
+		title: "Confirmed - Cases",
+		titleFontColor: "#4F81BC",
+		lineColor: "#4F81BC",
+		labelFontColor: "#4F81BC",
+		tickColor: "#4F81BC"
+	},
+	axisY2: {
+		title: "Recovered - Number",
+		titleFontColor: "#C0504E",
+		lineColor: "#C0504E",
+		labelFontColor: "#C0504E",
+		tickColor: "#C0504E"
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		itemclick: toggleDataSeries
+	},
+	data: [{
+		type: "column",
+		name: "Confired Cases",
+		showInLegend: true,      
+		yValueFormatString: "#,##0.# Infected",
+		dataPoints: [
+			{ x: 10, y: 40646, label: "Andhra Pradesh" },
+                { x: 15, y: 23589, label: "Bihar" },
+                { x: 20, y: 120107, label: "Delhi" },
+                { x: 25, y: 46430, label: "Gujrat" },
+                { x: 30, y: 55115, label: "Karnataka" },
+                { x: 35, y: 292589, label: "Maharastra" },
+                { x: 40, y: 27789, label: "Rajasthan" },
+                { x: 45, y: 160907, label: "Tamilnadu" },
+				{ x: 50, y: 42496, label: "Telengana" },
+                { x: 55, y: 45163, label: "Uttar Pradesh" },
+                { x: 60, y: 4102, label: "Uttarakhand" },
+				{ x: 65, y: 38011, label: "West Bengal" }
+		]
+	},
+	{
+		type: "column",
+		name: "Recovered Numbers",
+		axisYType: "secondary",
+		showInLegend: true,
+		yValueFormatString: "#,##0.# Recovered",
+		dataPoints: [
+			{ x: 10, y: 20298, label: "Andhra Pradesh" },
+                { x: 15, y: 14621, label: "Bihar" },
+                { x: 20, y: 99301, label: "Delhi" },
+                { x: 25, y: 32973, label: "Gujrat" },
+                { x: 30, y: 20757, label: "Karnataka" },
+                { x: 35, y: 160357, label: "Maharastra" },
+                { x: 40, y: 20626, label: "Rajasthan" },
+                { x: 45, y: 110807, label: "Tamilnadu" },
+				{ x: 50, y: 28705, label: "Telengana" },
+                { x: 55, y: 27634, label: "Uttar Pradesh" },
+                { x: 60, y: 3021, label: "Uttarakhand" },
+				{ x: 65, y: 22253, label: "West Bengal" }
+		]
+	}]
+});
+
+
+function toggleDataSeries(e) {
+	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	} else {
+		e.dataSeries.visible = true;
+	
+}
+
+}
 chart1.render();
   
   
