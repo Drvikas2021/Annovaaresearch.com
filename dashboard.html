@@ -65,12 +65,14 @@ var chart1 = new CanvasJS.Chart("chartContainer1",
         title: {
 			text: "Trend in Corona Rise in India "
 		},
-		axisX: {
-			labelFormatter: function (e) {
-				return CanvasJS.formatDate( e.value, "DD MMM");
+		axisX:{      
+				valueFormatString: "DD-MMM" ,
+				interval: 10,
+				intervalType: "day",
+				labelAngle: -50,
+				labelFontColor: "rgb(0,75,141)",
+				minimum: new Date(2020,02,25)
 			},
-			labelAngle: -20
-		},
 		axisY: {
 			includeZero: false
 		},
@@ -108,7 +110,7 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 	}], 
 	axisX: {
             interval: 0,
-			labelAngle: 45,
+			labelAngle: -50,
         },
 	axisY: {
 		title: "Confirmed - Cases",
