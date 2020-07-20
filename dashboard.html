@@ -137,12 +137,12 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 		cursor: "pointer",
 		itemclick: toggleDataSeries
 	},
-	 dataPointWidth: 5,
+	 dataPointWidth: 15,
 	data: [{
 		type: "column",
 		name: "Confirmed Cases",
 		showInLegend: true,      
-		yValueFormatString: "###0.# recovered",
+		yValueFormatString: "###0.# confirmed",
 		dataPoints: [
 		{ x: 10, y: 44609, label: "Andhra Pradesh" },
 		{ x: 10, y: 22918, label: "Assam" },
@@ -181,7 +181,7 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 		name: "Recovered Numbers",
 		axisYType: "secondary",
 		showInLegend: true,
-		yValueFormatString: "###0.# Infected",
+		yValueFormatString: "###0.# recovered",
 		dataPoints: [
 		{ x: 10, y: 21763, label: "Andhra Pradesh" },
 		{ x: 10, y: 15165, label: "Assam" },
