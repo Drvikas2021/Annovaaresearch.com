@@ -105,12 +105,14 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 	title:{
 		text: "Highest Corona Reported States"
 	},
+	
 	subtitles: [{
-		text: "confirmed and Recovered Rate (by July 19:2020)"
+		text: "confirmed and Recovered Rate (by July 20:2020)"
 	}], 
 	axisX: {
             interval: 0,
 			labelAngle: -50,
+		        dataPointWidth: 20
         },
 	axisY: {
 		title: "Confirmed - Cases",
@@ -118,6 +120,7 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 		lineColor: "#4F81BC",
 		labelFontColor: "#4F81BC",
 		tickColor: "#4F81BC"
+		
 	},
 	axisY2: {
 		title: "Recovered - Number",
@@ -137,7 +140,7 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 		type: "column",
 		name: "Confirmed Cases",
 		showInLegend: true,      
-		yValueFormatString: "###0.# Infected",
+		yValueFormatString: "###0.# recovered",
 		dataPoints: [
 		{ x: 10, y: 44609, label: "Andhra Pradesh" },
 		{ x: 10, y: 22918, label: "Assam" },
