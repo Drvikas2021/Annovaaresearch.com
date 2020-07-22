@@ -234,7 +234,9 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 		text: "Corona Reported Vs Recovered Cases in India  - 2020"
 	},
 	axisX: {
-		title:"Coronon Cases  (in Numbers)"
+		title:"Coronon Cases  (in Numbers)" 
+                 maximum: 200000
+
 	},
 	axisY: {
 		title:"Morbidity Rate"
@@ -248,7 +250,7 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 		legendText: "Size of Bubble Represents Corono Cases in Numbers",
 		legendMarkerType: "circle",
 		legendMarkerColor: "grey",
-		toolTipContent: "<b>{name}</b><br/>Recovered: {x} number<br/> Morbidity Rate: {number}<br/> Corona Cases: {z}",
+		toolTipContent: "<b>{name}</b><br/>Recovered: {x} number<br/> Morbidity Rate: {y}<br/> Corona Cases: {z}",
 		dataPoints: [
 		    { x: 159, y: 0, z: 212, name: "Andaman and Nicobar"},
 		    { x: 303, y: 3, z: 858, name: "Arunachal Pradesh"},
