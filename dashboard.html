@@ -57,9 +57,7 @@ $(document).ready(function(){
   <script type="text/javascript">
   window.onload = function () {
   
- 
-
-var chart1 = new CanvasJS.Chart("chartContainer1",
+   var chart1 = new CanvasJS.Chart("chartContainer1",
     {
         animationEnabled: true,
         title: {
@@ -67,7 +65,7 @@ var chart1 = new CanvasJS.Chart("chartContainer1",
 		},
 		axisX:{      
 				valueFormatString: "DD-MMM" ,
-				interval: 15,
+				interval: 10,
 				intervalType: "day",
 				labelAngle: -50,
 				labelFontColor: "rgb(0,75,141)",
@@ -88,7 +86,7 @@ var chart1 = new CanvasJS.Chart("chartContainer1",
 				
 				{ x: new Date(2020, 4, 29), y: 138535 },
 				
-				{ x: new Date(2020, 6, 22), y: 1192915 }
+				{ x: new Date(2020, 6, 20), y: 1192915 }
 				
 				
 				
@@ -110,7 +108,7 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 	},
 	
 	subtitles: [{
-		text: "confirmed and Recovered Rate (by July 20:2020)"
+		text: "confirmed and Recovered Rate (till July 20:2020)"
 	}], 
 	axisX: {
             interval: 5,
@@ -230,6 +228,75 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 });
 
 
+     var chart3 = new CanvasJS.Chart("chartContainer3", {
+	animationEnabled: true,
+	title:{
+		text: "Corona Reported Vs Recovered Cases in India  - 2020"
+	},
+	axisX: {
+		title:"Coronon Cases  (in Numbers)"
+	},
+	axisY: {
+		title:"Morbidity Rate"
+	},
+	legend:{
+		horizontalAlign: "left"
+	},
+	data: [{
+		type: "bubble",
+		showInLegend: true,
+		legendText: "Size of Bubble Represents Corono Cases in Numbers",
+		legendMarkerType: "circle",
+		legendMarkerColor: "grey",
+		toolTipContent: "<b>{name}</b><br/>Recovered: {x} number<br/> Morbidity Rate: {number}<br/> Corona Cases: {z}",
+		dataPoints: [
+		    { x: 159, y: 0, z: 212, name: "Andaman and Nicobar"},
+		    { x: 303, y: 3, z: 858, name: "Arunachal Pradesh"},
+			{ x: 25574, y: 758, z: 58668, name: "Andhra Pradesh"},
+			{ x: 18033, y: 58, z:25382, name: "Assam"},
+			{ x: 18515, y: 217, z:28952, name: "Bihar" },
+			{ x: 4114, y: 29, z: 5729, name: "Candigarh" },
+			{ x: 36423, y: 2196, z: 50739, name: "Chhattisgarh" },
+			{ x: 463, y: 2, z: 705, name: "Dadra and Nagar Haveli and Daman" },
+			{ x: 106118, y: 3690, z: 125096, name: "Delhi" },
+			{ x: 2449, y: 26, z: 4027, name: "Goa" },
+			{ x: 36423, y: 2196, z:50379, name: "Gujrat" },
+			{ x: 20952, y: 364, z:27462, name: "Haryana" },
+			{ x: 1077, y: 11, z: 1664, name: "Himachal Pradesh" },
+			{ x: 8455, y: 263, z:15258, name: "Jammu and Kashmir" },
+			{ x: 2904, y: 55, z: 6159, name: "Jharkhand" },
+			{ x: 25459, y: 1464, z: 71069, name: "Karnataka" },
+			{ x: 5890, y: 44, z: 13994, name: "Kerala" },
+			{ x: 1010, y: 2, z: 1198, name: "Ladakh" },
+			{ x: 182217, y: 12276, z: 327031, name: "Maharastra" },
+			{ x: 1400, y: 0, z: 2015, name: "Manipur" },
+			{ x: 70, y: 4, z: 490, name: "Meghalaya" },
+			{ x: 168, y: 0, z: 317, name: "Mizoram" },
+			{ x: 16257, y: 756, z: 24095, name: "Madhya Pradesh" },
+			{ x: 485, y: 0, z: 1030, name: "Nagaland" },
+			{ x: 1310, y: 103, z: 18757, name: "Odisha" },
+			{ x: 1318, y: 263, z: 2179, name: "Puducherry" },
+			{ x: 7389, y: 2.34, z: 10889, name: "Punjab" },
+			{ x: 22744, y: 577, z: 31373, name: "Rajasthan" },
+			{ x: 330, y: 0, z: 108, name: "Sikkim"},
+			{ x: 126670, y: 2626, z: 180643, name: "Tamilnadu"},
+			{ x: 37385, y: 429, z: 47705, name: "Telengana"},
+			{ x: 1926, y: 8, z: 3331, name: "Tripura"},
+			{ x: 31855, y: 1229, z: 53288, name: "Uttar Pradesh"},
+			{ x: 4849, y: 55, z: 3297, name: "Uttarakhand"},
+			{ x: 28035, y: 1182, z: 47030, name: "West Bengal"}
+			
+			
+			
+		]
+	}]
+});
+
+
+
+
+
+
 function toggleDataSeries(e) {
 	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
 		e.dataSeries.visible = false;
@@ -258,6 +325,7 @@ chart1.render();
   
   
   chart2.render();
+  chart3.render();
 
 }
 </script>
@@ -265,6 +333,8 @@ chart1.render();
 
 
 </head>
+
+
 	<body>
 		
 		<nav id="myNavbar" class="navbar navbar-expand-md navbar-dark bg-dark mb-3 fixed-top">
@@ -315,7 +385,8 @@ chart1.render();
 	</div>
 		
 <div id="chartContainer1" style="width: 90%; height: 400px;display: inline-block;"></div> <br />
-<div id="chartContainer2" style="width: 90%; height: 400px;display: inline-block;"></div><br/>
+<div id="chartContainer2" style="width: 90%; height: 400px;display: inline-block;"></div><br><br>
+<div id="chartContainer2" style="width: 90%; height: 400px;display: inline-block;"></div><br><br>
 			
 		
 
