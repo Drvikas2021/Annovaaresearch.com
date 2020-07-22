@@ -46,6 +46,98 @@ $(document).ready(function(){
     }) 
 });
 </script>
+	
+	<script>
+// Defining a function to display error message
+function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+// Defining a function to validate form 
+function validateForm() {
+    // Retrieving the values of form elements 
+    var name = document.contactForm.name.value;
+    var email = document.contactForm.email.value;
+    var mobile = document.contactForm.mobile.value;
+    var country = document.contactForm.country.value;
+   
+    
+	// Defining error variables with a default value
+    var nameErr = emailErr = mobileErr = countryErr =  true;
+    
+    // Validate name
+    if(name == "") {
+        printError("nameErr", "Please enter your name");
+    } else {
+        var regex = /^[a-zA-Z\s]+$/;                
+        if(regex.test(name) === false) {
+            printError("nameErr", "Please enter a valid name");
+        } else {
+            printError("nameErr", "");
+            nameErr = false;
+        }
+    }
+    
+    // Validate email address
+    if(email == "") {
+        printError("emailErr", "Please enter your email address");
+    } else {
+        // Regular expression for basic email validation
+        var regex = /^\S+@\S+\.\S+$/;
+        if(regex.test(email) === false) {
+            printError("emailErr", "Please enter a valid email address");
+        } else{
+            printError("emailErr", "");
+            emailErr = false;
+        }
+    }
+    
+    // Validate mobile number
+    if(mobile == "") {
+        printError("mobileErr", "Please enter your mobile number");
+    } else {
+        var regex = /^[1-9]\d{9}$/;
+        if(regex.test(mobile) === false) {
+            printError("mobileErr", "Please enter a valid 10 digit mobile number");
+        } else{
+            printError("mobileErr", "");
+            mobileErr = false;
+        }
+    }
+    
+    // Validate country
+    if(country == "Select") {
+        printError("countryErr", "Please select your country");
+    } else {
+        printError("countryErr", "");
+        countryErr = false;
+    }
+    
+    // Validate gender
+    
+    // Prevent the form from being submitted if there are any errors
+    if((nameErr || emailErr || mobileErr || countryErr) == true) {
+       return false;
+    } else {
+        // Creating a string from input data for preview
+		
+		        var dataPreview = "You've entered the following details: \n" +
+				              "We will contact you soon: \n" +
+                          "Full Name: " + name + "\n" +
+                          "Email Address: " + email + "\n" +
+                          "Mobile Number: " + mobile + "\n" +
+                          "Country: " + country + "\n";
+
+        
+        // Display input data in a dialog box before submitting the form
+        alert(dataPreview);
+    }
+};
+</script>
+	
+	
+	
+	
 </head>
 <body>
 <nav id="myNavbar" class="navbar navbar-expand-md navbar-dark bg-dark mb-3 fixed-top">
@@ -115,42 +207,46 @@ $(document).ready(function(){
 
 					</center>
 				</div><!--box-header End-->
-				<form action="" method="post" autocomplete="off">
-					<div class="form-group">
-						<label>Name</label>
-						<input type="text" name="name" required="" class="form-control">
-					</div>
-
-					<div class="form-group">
-						<label>Email</label>
-						<input type="text" name="email" class="form-control" required="">
-					</div>
-
-					<div class="form-group">
-						<label>Subject</label>
-						<input type="text" name="subject" class="form-control" required="">
-					</div>
-
-					<div class="form-group">
-						<label>Massage</label>
-						<textarea class="form-control" name="massage"></textarea>
-					</div>
-					
-					<div class="text-right">
-						<button style="font-size:24px"><i class="fa fa-refresh">refresh</i></button>
-							
-						
-					</div>
-					
-					
-
-					<div class="text-center">
-						
-<a href="response.html" onclick="alert('Thank You, We will contact you soon!');">Submit</a>
-
-							
-					
-				</form>
+				   <body>
+<form name="contactForm" onsubmit="return validateForm()" action="" method="post">
+    <h2>Application Form</h2>
+    <div class="row" style="text-align:center;">
+	<div class="col-md-6">
+        <label>Full Name</label>
+        <input type="text" name="name"><br><br>
+        <div class="error" id="nameErr"></div>
+    </div>
+    <div class="row">
+        <label>Email Address</label>
+        <input type="text" name="email"><br><br>
+        <div class="error" id="emailErr"></div>
+    </div>
+    <div class="row">
+        <label>Mobile Number</label>
+        <input type="text" name="mobile" maxlength="10"><br><br>
+        <div class="error" id="mobileErr"></div>
+    </div>
+    <div class="row">
+        <label>Country</label>
+        <select name="country">
+            <option>Select</option>
+            <option>Australia</option>
+            <option>India</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+        </select><br><br>
+        <div class="error" id="countryErr"></div>
+    </div>
+	<div>
+	<textarea rows="5" cols="25"></textarea><br><br>
+	</div>
+    
+    <div class="row">
+        <input type="submit" value="Submit">
+		<input type="reset" name="reset" value="reset">
+    </div>
+	</div>
+</form>
 
 			</div><!--box End-->
 		</div><!--col-md-9 End-->
