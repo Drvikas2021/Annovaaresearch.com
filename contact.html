@@ -59,7 +59,7 @@ function validateForm() {
     var name = document.contactForm.name.value;
     var email = document.contactForm.email.value;
     var subject = document.contactForm.subject.value;
-    var message = document.contactForm.message.value;
+    
    
     
 	// Defining error variables with a default value
@@ -203,7 +203,7 @@ function validateForm() {
 
 					</center>
 				</div><!--box-header End-->
-				<form name="contactForm" onsubmit="return validateForm()" action="response.html" method="post">
+				<form name="contactForm" onsubmit="return validateForm()" action="" method="post">
 					<div class="form-group">
 						<label>Name</label>
 						<input type="text" name="name" required="" class="form-control" autocomplete="off">
@@ -238,7 +238,7 @@ function validateForm() {
 
 					<div class="text-center">
 						
-						<button type="btn" value="submit" name="submit">Submit</button>
+						<button type="btn" value="submit" name="submit"><a href="response.html">Submit</a></button>
 						<input type="reset" name="reset" value="reset">
 
 							
