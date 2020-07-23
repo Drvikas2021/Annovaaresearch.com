@@ -1,0 +1,103 @@
+
+.content{
+width:1200px;
+margin:40px auto
+}
+
+.main{
+float:center;
+width:650px;
+margin-top:40px
+}
+
+#progressbar{
+margin:0;
+padding:0;
+font-size:18px
+}
+
+#active1{
+color:red
+}
+
+fieldset{
+display:none;
+width:350px;
+padding:20px;
+margin-top:50px;
+margin-left:85px;
+border-radius:5px;
+box-shadow:3px 3px 25px 1px gray;
+}
+
+#first{
+display:block;
+width:700px;
+padding:20px;
+margin-top:50px;
+border-radius:5px;
+margin-left:85px;
+box-shadow:3px 3px 25px 1px pink
+}
+
+#second{
+
+width:700px;
+padding:20px;
+margin-top:50px;
+border-radius:5px;
+margin-left:85px;
+box-shadow:3px 3px 25px 1px pink
+}
+
+#third{
+
+width:700px;
+padding:20px;
+margin-top:50px;
+border-radius:5px;
+margin-left:85px;
+box-shadow:3px 3px 25px 1px pink
+}
+
+
+input[type=text],input[type=password],select{
+width:100%;
+margin:10px 0;
+height:70px;
+padding:5px;
+border:3px solid green;
+border-radius:8px
+}
+
+textarea{
+width:100%;
+margin:10px 0;
+height:70px;
+padding:5px;
+border:3px solid #ecb0dc;
+border-radius:4px
+}
+
+input[type=submit],input[type=button]{
+width:120px;
+margin:15px 25px;
+padding:5px;
+height:40px;
+background-color:yellow;
+border:none;
+border-radius:4px;
+color:red;
+font-family:'Droid Serif',serif
+}
+h2,p{
+text-align:center;
+font-family:'Droid Serif',serif
+}
+
+li{
+margin-right:80px;
+display:inline;
+color:#c1c5cc;
+font-family:'Droid Serif',serif
+}
