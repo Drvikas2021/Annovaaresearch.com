@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - Dark Style</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="includes/styles.css" />
+	<style>
+	body{
+	position: relative; /* required */
+    padding-top: 70px;	/* prevent content to go underneath the fixed navbar */
+}
+.navbar{
+	
+	background-color:#FF7F50 !important;
+	
+}
+
+.navbar a{
+	
+	color:#6A5ACD !important;
+	font-size:22px;
+}
+
+	  
+    </style>
+	<script>
+$(document).ready(function(){
+    $("body").scrollspy({
+        target: "#myNavbar",
+        offset: 60
+    }) 
+});
+</script>
+  </head>
+
+  <body>
+  <nav id="myNavbar" class="navbar navbar-expand-md navbar-dark bg-dark mb-3 fixed-top">
+    <div class="container-fluid">
+        <a href="index.html" class="navbar-brand mr-3">Home</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+		    <a href="dashboard.html" class="nav-item nav-link"><i class="fa fa-dashboard"></i>DashBoard</a>	
+                <a href="index.html" class="nav-item nav-link active"><i class="fa fa-home"></i> Home</a>
+                <a href="dashboard.html" class="nav-item nav-link"><i class="fa fa-table" aria-hidden="true"></i>Tables & Charts</a>
+				 <a href="#" class="nav-item nav-link"><i class="fa fa-user-circle" aria-hidden="true"></i>Indian Economy</a>
+				
+			
+                <a href="#" class="nav-item nav-link"><i class="fa fa-globe" aria-hidden="true"></i>World Economy</a>
+                <a href="#" class="nav-item nav-link"><i class="fa fa-envelope"></i> Blogs & Reports</a>
+				<div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Service</button>
+        <div class="dropdown-menu">
+		
+            <a href="service.html" class="dropdown-item">PHD Counsultation</a>
+            <a href="service.html" class="dropdown-item">Technical Counsultation</a>
+			<a href="service.html" class="dropdown-item">Research</a>
+			<a href="service.html" class="dropdown-item">Paper Publication</a>
+			</div>
+				
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a href="#" class="nav-item nav-link">Register</a>
+                <a href="#" class="nav-item nav-link">Login</a>
+            </div>
+			<form class="form-inline ml-auto">
+            <input type="text" class="form-control mr-sm-2" placeholder="Search">
+            <button type="submit" class="btn btn-outline-light">Search</button>
+        </form>
+        </div>
+    </div>    
+</nav>
+    <div id="wrapper">
+      <div class="content-area">
+        <div class="container-fluid">
+          <div class="text-right mt-3 mb-3 d-fixed">
+            <button class="btn btn-primary" id="fusionexport-btn">
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              <span class="btn-text">ANNOVA RESEARCH</span>
+            </button>
+          </div>
+          <div class="main">
+            <div class="row mt-4">
+              <div class="col-md-5">
+                <div class="box columnbox mt-4">
+                  <div id="columnchart"></div>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="box  mt-4">
+                  <div id="linechart"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-5">
+                <div class="box radialbox mt-4">
+                  <div id="circlechart"></div>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="box mt-4">
+                  <div class="mt-4">
+                    <div id="progress1"></div>
+                  </div>
+                  <div class="mt-4">
+                    <div id="progress2"></div>
+                  </div>
+                  <div class="mt-4">
+                    <div id="progress3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="float-right edit-on-codepen">
+                <a
+                  target="_blank"
+                  href="#"
+                  ><img src="#"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- installing few libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+    <script src="includes/scripts.js"></script>
+  </body>
+</html>
