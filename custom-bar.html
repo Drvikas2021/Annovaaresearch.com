@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Corona Confirmed Cases:25th July, 2020</title>
+
+    <link href="../../assets/styles11.css" rel="stylesheet" />
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/style1.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+    <style>
+      
+        #chart {
+      max-width: 650px;
+      margin: 35px auto;
+    }
+      
+	  	    
+body{
+	position: relative; /* required */
+    padding-top: 70px;	/* prevent content to go underneath the fixed navbar */
+}
+.navbar{
+	
+	background-color:#FF7F50 !important;
+	
+}
+
+.navbar a{
+	
+	color:#6A5ACD !important;
+	font-size:22px;
+}
+
+	  
+    </style>
+
+    <script>
+      window.Promise ||
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+        )
+      window.Promise ||
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+        )
+      window.Promise ||
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+        )
+    </script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	
+	
+
+
+	
+    
+    
+    
+    
+
+	
+<script>
+$(document).ready(function(){
+    $("body").scrollspy({
+        target: "#myNavbar",
+        offset: 60
+    }) 
+});
+</script>
+	
+	
+		 
+	    <style>
+body{
+	position: relative; /* required */
+    padding-top: 70px;	/* prevent content to go underneath the fixed navbar */
+}
+.navbar{
+	
+	background-color:#FF7F50 !important;
+	
+}
+
+.navbar a{
+	
+	color:#6A5ACD !important;
+	font-size:22px;
+}
+
+
+	</style>
+    
+    
+    
+    
+
+	
+<script>
+$(document).ready(function(){
+    $("body").scrollspy({
+        target: "#myNavbar",
+        offset: 60
+    }) 
+});
+</script>
+	
+
+    
+
+    
+  </head>
+
+  <body>
+  <nav id="myNavbar" class="navbar navbar-expand-md navbar-dark bg-dark mb-3 fixed-top">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand mr-3">Annova Research</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+		    <a href="dashboard.html" class="nav-item nav-link"><i class="fa fa-dashboard"></i>DashBoard</a>	
+                <a href="index.html" class="nav-item nav-link active"><i class="fa fa-home"></i> Home</a>
+                <a href="dashboard.html" class="nav-item nav-link"><i class="fa fa-table" aria-hidden="true"></i>Tables & Charts</a>
+				 <a href="#" class="nav-item nav-link"><i class="fa fa-user-circle" aria-hidden="true"></i>Indian Economy</a>
+				
+			
+                <a href="#" class="nav-item nav-link"><i class="fa fa-globe" aria-hidden="true"></i>World Economy</a>
+                <a href="#" class="nav-item nav-link"><i class="fa fa-envelope"></i> Blogs & Reports</a>
+				<div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Service</button>
+        <div class="dropdown-menu">
+		
+            <a href="service.html" class="dropdown-item">PHD Counsultation</a>
+            <a href="service.html" class="dropdown-item">Technical Counsultation</a>
+			<a href="service.html" class="dropdown-item">Research</a>
+			<a href="service.html" class="dropdown-item">Paper Publication</a>
+			</div>
+				
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a href="#" class="nav-item nav-link">Register</a>
+                <a href="#" class="nav-item nav-link">Login</a>
+            </div>
+			<form class="form-inline ml-auto">
+            <input type="text" class="form-control mr-sm-2" placeholder="Search">
+            <button type="submit" class="btn btn-outline-light">Search</button>
+        </form>
+        </div>
+    </div>    
+</nav>
+
+  
+     <div id="chart"></div>
+
+    <script>
+      
+        var options = {
+          series: [{
+          data: [259, 80858, 1056, 29921, 33926, 823, 6731, 815, 0, 128389, 4545, 53545, 29755, 1954, 16782, 7493, 85870, 16995, 1246, 0, 357117, 2146, 588, 361, 26210, 1239, 22693, 2515, 12216, 34178, 477, 199749, 52466, 3759, 60771, 5445, 53973]
+        }],
+		  
+          chart: {
+          type: 'bar',
+          height: 380
+        },
+        plotOptions: {
+          bar: {
+            barHeight: '100%',
+            distributed: true,
+            horizontal: true,
+            dataLabels: {
+              position: 'bottom'
+            },
+          }
+        },
+        colors: ['#33b2df', '#546E7A', '#d4526e', '#13d8aa', '#A5978B', '#2b908f', '#f9a3a4', '#90ee7e',
+          '#f48024', '#69d2e7', '#FF69B4', '#DDA0DD', '#9400D3', '#FAEBD7', '#FFE4C4', '#A52A2A', '#DEB887', '#5F9EA0', '#7FFF00', '#D2691E', '#FF7F50', '#DC143C',
+		  '#00FFFF', '#B8860B', '#A9A9A9', '#BDB76B', '#8B008B', '#556B2F', '#FF8C00', '#9932CC', '#8B0000', '#2F4F4F', '#00CED1', '#FF1493', '#B22222', '#228B22', '#FF00FF', '#FFD700', '#ADFF2F', '#F08080'
+        ], 
+        dataLabels: {
+          enabled: true,
+          textAnchor: 'start',
+          style: {
+            colors: ['#fff']
+          },
+          formatter: function (val, opt) {
+            return opt.w.globals.labels[opt.dataPointIndex] + ":  " + val
+          },
+          offsetX: 0,
+          dropShadow: {
+            enabled: true
+          }
+        },
+        stroke: {
+          width: 1,
+          colors: ['#fff']
+        },
+        xaxis: {
+          categories: ['Andaman and Nicobar', 'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chandigarh', 'Chhattisgarh',
+            'Daman and Diu', 'Delhi', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jammu and Kashmir', 'Jharkhand', 'Karnataka', 'Kerala',
+             'Ladakh', 'Lakshadweep', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Madhya Pradesh', 'Nagaland', 'Odisha', 'Puducherry',
+              'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telengana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'			 
+          ],
+        },
+        yaxis: {
+          labels: {
+            show: false
+			
+			
+          }
+        },
+        title: {
+            text: 'Corona Confirmed Cases:25th July, 2020',
+            align: 'center',
+            floating: true
+        },
+        subtitle: {
+            text: 'State-wise Cases',
+            align: 'center',
+        },
+        tooltip: {
+          theme: 'dark',
+          x: {
+            show: false
+          },
+          y: {
+            title: {
+              formatter: function () {
+                return ''
+              }
+            }
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      
+      
+    </script>
+	
+	<caption style="float:center;">Source:www.data.gov.in</caption>
+	
+    
+  </body>
+</html>
