@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - Dark Style</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="includes/styles.css" />
+	
+	<link rel="stylesheet" type="text/css" href="styles/style1.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+    <style>
+      
+        #chart {
+      max-width: 650px;
+      margin: 35px auto;
+    }
+      
+	  	    
+body{
+	position: relative; /* required */
+    padding-top: 70px;	/* prevent content to go underneath the fixed navbar */
+}
+.navbar{
+	
+	background-color:#FF7F50 !important;
+	
+}
+
+.navbar a{
+	
+	color:#6A5ACD !important;
+	font-size:22px;
+}
+
+	  
+    </style>
+		
+<script>
+$(document).ready(function(){
+    $("body").scrollspy({
+        target: "#myNavbar",
+        offset: 60
+    }) 
+});
+</script>
+	
+  </head>
+
+  <body>
+  
+   <nav id="myNavbar" class="navbar navbar-expand-md navbar-dark bg-dark mb-3 fixed-top">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand mr-3">Annova Research</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+		    <a href="dashboard.html" class="nav-item nav-link"><i class="fa fa-dashboard"></i>DashBoard</a>	
+                <a href="index.html" class="nav-item nav-link active"><i class="fa fa-home"></i> Home</a>
+                <a href="dashboard.html" class="nav-item nav-link"><i class="fa fa-table" aria-hidden="true"></i>Tables & Charts</a>
+				 <a href="#" class="nav-item nav-link"><i class="fa fa-user-circle" aria-hidden="true"></i>Indian Economy</a>
+				
+			
+                <a href="#" class="nav-item nav-link"><i class="fa fa-globe" aria-hidden="true"></i>World Economy</a>
+                <a href="#" class="nav-item nav-link"><i class="fa fa-envelope"></i> Blogs & Reports</a>
+				<div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Service</button>
+        <div class="dropdown-menu">
+		
+            <a href="service.html" class="dropdown-item">PHD Counsultation</a>
+            <a href="service.html" class="dropdown-item">Technical Counsultation</a>
+			<a href="service.html" class="dropdown-item">Research</a>
+			<a href="service.html" class="dropdown-item">Paper Publication</a>
+			</div>
+				
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a href="#" class="nav-item nav-link">Register</a>
+                <a href="#" class="nav-item nav-link">Login</a>
+            </div>
+			<form class="form-inline ml-auto">
+            <input type="text" class="form-control mr-sm-2" placeholder="Search">
+            <button type="submit" class="btn btn-outline-light">Search</button>
+        </form>
+        </div>
+    </div>    
+</nav>
+    <div id="wrapper">
+      <div class="content-area">
+        <div class="container-fluid">
+          <div class="text-right mt-3 mb-3 d-fixed">
+            <button class="btn btn-primary" id="fusionexport-btn">
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              <span class="btn-text">Download as PDF</span>
+            </button>
+          </div><br><br><br>
+          <div class="main">
+		  <h2>Corona Status From (July20 to july 26)-2020<h2>
+            <div class="row sparkboxes mt-4">
+              <div class="col-md-4">
+                <div class="box box1">
+				<h5>Corona:Incidence(July,26-2020)<h5>
+                  <div class="details">
+                    <h3>1,424,202</h3>
+                    <h4>Infected</h4>
+                  </div>
+                  <div id="spark1"></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box box2">
+                  <div class="details">
+                    <h3>910,258<h3>
+                    <h4>Recovered</h4>
+                  </div>
+                  <div id="spark2"></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box box3">
+                  <div class="details">
+                    <h3>32,656</h3>
+                    <h4>Mortality</h4>
+                  </div>
+                  <div id="spark3"></div>
+                </div>
+              </div>
+              
+
+            
+              <div class="col-md-12">
+                <div class="box shadow mt-4">
+                  <div id="line-adwords" class=""></div>
+                </div>
+              </div>
+            </div>
+
+            
+	
+	<div data-readingaid-gradient class="readingAid__gradient"></div></div><button type="button"
+                                data-readingaid-toggle="Hide"
+                                data-gtm="descriptionReadMore"
+                                class="button button--additionalText button--primary lightButton lightButton--hollow font-size-15px readingAid__expand--invisible hidePrint"><span>
+                                Read more
+                            </span></button></div></div></article><div class="display-block width100 flex--order-mobilefirst-s-1"><h2 class="sectionHeadline sectionHeadline--statistic"><span class="display-block width100">
+                        Number of the coronavirus (COVID-19) cases across Indian states and union territories as of July 13, 2020, by type
+                    </span></h2></div><div class="statisticData flex--order-mobilefirst-s-2"><div class="statisticWrapper"><div id="statisticContainer" class="statisticContainer" data-paywallcontent><div class="panelCard panelCard--statistic"><div class="statisticChartNavMobile hidePrint"><div class=""><div class="mobileRadioGroup" data-gtm="statistic__dataSwitch"><label for="displayTypeTable" class="mobileRadioGroup__item"><input type="radio" id="displayTypeTable" class="mobileRadioGroup__input mobileRadioGroup__input--statistic" name="displayType" data-chart-change-to="table" /><span class="mobileRadioGroup__text"><i class="fa fa-table" aria-hidden="true"></i></span></label><label for="displayTypeColumn" class="mobileRadioGroup__item"><input type="radio" id="displayTypeColumn" class="mobileRadioGroup__input mobileRadioGroup__input--statistic" name="displayType" data-chart-change-to="column" checked/><span class="mobileRadioGroup__text"><i class="fa fa-bar-chart" aria-hidden="true"></i></span></label></div></div><div class="statisticChartNavMobile__right"></div></div><article class="panel__content panel__content--statistic"><div data-readingaid data-readingaid-height="500"><div class="readingAid"><div id="tableContainer"
+         class="statisticChart statisticChart--typeTable hide "><div class="dataTables_wrapper"><div id="statTable"></div></div><table id="statTableHTML" class="table hidden"><thead><tr><th></th><th>Active</th><th>Recovered</th><th>Deceased</th></tr></thead><tbody><tr><td>Maharashtra
+</td><td>103,813</td><td>140,325</td><td>10,289</td></tr><tr><td>Tamil Nadu
+</td><td>46,972</td><td>89,532</td><td>1,966</td></tr><tr><td>Karnataka
+</td><td>22,750</td><td>15,409</td><td>684</td></tr><tr><td>Delhi
+</td><td>19,155</td><td>89,968</td><td>3,371</td></tr><tr><td>Andhra Pradesh
+</td><td>13,428</td><td>15,412</td><td>328</td></tr><tr><td>Uttar Pradesh
+</td><td>12,208</td><td>23,334</td><td>934</td></tr><tr><td>Telangana
+</td><td>11,833</td><td>22,482</td><td>356</td></tr><tr><td>Gujarat
+</td><td>10,613</td><td>29,162</td><td>2,045</td></tr><tr><td>West Bengal
+</td><td>10,500</td><td>18,581</td><td>932</td></tr><tr><td>Rajasthan
+</td><td>5,779</td><td>18,103</td><td>510</td></tr><tr><td>Assam
+</td><td>5,610</td><td>10,426</td><td>35</td></tr><tr><td>Bihar
+</td><td>5,001</td><td>11,498</td><td>143</td></tr><tr><td>Haryana
+</td><td>4,956</td><td>15,983</td><td>301</td></tr><tr><td>Jammu and Kashmir
+</td><td>4,355</td><td>5,979</td><td>179</td></tr><tr><td>Odisha
+</td><td>4,307</td><td>8,750</td><td>64</td></tr><tr><td>Madhya Pradesh
+</td><td>4,103</td><td>12,876</td><td>653</td></tr><tr><td>Kerala
+</td><td>3,747</td><td>4,095</td><td>31</td></tr><tr><td>Punjab
+</td><td>2,230</td><td>5,392</td><td>199</td></tr><tr><td>Jharkhand
+</td><td>1,418</td><td>2,308</td><td>30</td></tr><tr><td>Goa
+</td><td>952</td><td>1,487</td><td>14</td></tr><tr><td>Chhattisgarh
+</td><td>887</td><td>3,153</td><td>19</td></tr><tr><td>Manipur
+</td><td>713</td><td>896</td><td>0</td></tr><tr><td>Uttarakhand
+</td><td>704</td><td>2,786</td><td>47</td></tr><tr><td>Puducherry
+</td><td>661</td><td>739</td><td>18</td></tr><tr><td>Tripura
+</td><td>631</td><td>1,421</td><td>2</td></tr><tr><td>Nagaland
+</td><td>447</td><td>327</td><td>0</td></tr><tr><td>Himachal Pradesh
+</td><td>273</td><td>929</td><td>11</td></tr><tr><td>Meghalaya
+</td><td>238</td><td>66</td><td>2</td></tr><tr><td>Dadra and Nagar Haveli and Daman and Diu
+</td><td>234</td><td>245</td><td>0</td></tr><tr><td>Arunachal Pradesh
+</td><td>219</td><td>138</td><td>2</td></tr><tr><td>Ladakh
+</td><td>157</td><td>928</td><td>1</td></tr><tr><td>Chandigarh
+</td><td>134</td><td>417</td><td>8</td></tr><tr><td>Mizoram
+</td><td>81</td><td>150</td><td>0</td></tr><tr><td>Sikkim
+</td><td>72</td><td>81</td><td>0</td></tr><tr><td>Andaman and Nicobar Islands
+</td><td>70</td><td>93</td><td>0</td></tr></tbody></table></div><div data-statistic-chart
+                         class="highchart-container chart-vertical"><div data-readingaid-text class="readingAid__text"><div data-chart id="chart" class="statisticChart"><div id="preloader" class="cssPreloader--absolute"><div class="cssPreloader"><div class="cssPreloader__inner"></div></div><div class="h5 subline text-center">
+                                                Loading statistic... 
+                                            </div></div></div><div data-readingaid-gradient class="readingAid__gradient"></div></div><div data-collapse-wrapper class="button-wrapper button-bottom hidePrint"><button type="button"
+                                                data-readingaid-toggle="<i class='fa fa-minus-square-o margin-right-5' aria-hidden='true'></i> Collapse statistic"
+                                                class="button button--primary lightButton lightButton--hollow margin-top-20 font-size-15px"><i class="fa fa-plus-square-o margin-right-5"></i>
+                                            Expand statistic
+                                        </button></div></div></div></div></article><div class="statistic__footer"><div class="statistic__footerLeft"><p class="padding-top-10"><span class="text--link link hideMobile"
+                                        data-gtm="showDetailsLink"
+                                        data-infotab-unlock="sources"
+                                        data-file="additionalInfo"><i class="fa fa-info-circle" aria-hidden="true"></i>
+                                   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- installing few libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+    <script src="includes/script1.js"></script>
+  </body>
+</html>
