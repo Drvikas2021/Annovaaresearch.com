@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Candlestick Chart</title>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script> 
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script> 
+<script type="text/javascript">
+
+window.onload = function() {
+$(".chartContainer").CanvasJSChart({
+	title: {
+		text: "BSE Index: July-2020"
+	},
+	subtitle: {
+	        text: "Julu:2020"
+	    },   
+	axisY: {
+		includeZero: false,
+		title: "BSE (Index)"
+	},
+	axisX: {
+		intervalType: "day",
+		interval: 1,
+		valueFormatString: "DD-MM-YYYY",
+		labelAngle: -45
+	},
+	toolTip: { 
+	content: "{x}20 <br/> <strong>BSE (Index):</strong> <br/>Open: {y[0]}, Close: {y[3]} <br/> Low: {y[2]}, High: {y[1]}"
+	},
+	data: [
+	{
+		type: "candlestick",
+		risingColor: "green",
+		color: "red",
+		dataPoints: [
+			{x:new Date(2020,06,01), y:[35009.59, 35467.23, 34927.20, 35414.45]},
+			{x:new Date(2020,06,02), y:[35604.00, 36014.92, 35595.36, 35843.70]},
+			{x:new Date(2020,06,03), y:[36025.38, 36110.21, 35872.38, 36021.42]},
+			{x:new Date(2020,06,06), y:[36313.46, 36661.66, 36254.02, 36487.28]},
+			{x:new Date(2020,06,07), y:[36660.35, 36723.27, 36271.09, 36674.52]},
+			{x:new Date(2020,06,08), y:[36738.38, 36828.43, 36234.17, 36329.01]},
+			{x:new Date(2020,06,09), y:[36450.69, 36806.30, 36422.30, 36737.69]},
+			{x:new Date(2020,06,10), y:[36555.13, 36748.89, 36401.11, 36594.33]},
+			{x:new Date(2020,06,13), y:[36880.66, 37024.20, 36533.96, 36693.69]},
+			{x:new Date(2020,06,14), y:[36517.28, 36538.10,	35877.42, 36033.06]},
+			{x:new Date(2020,06,15), y:[36314.76, 36810.25,	35894.96,  36051.81]},
+			{x:new Date(2020,06,16), y:[36517.28, 36538.10,	35877.42,  36033.06]},
+			{x:new Date(2020,06,17), y:[36547.75, 37125.98, 36512.92,  37020.14]},
+			{x:new Date(2020,06,20), y:[37409.03, 37478.87, 37185.78,  37418.99]},
+			{x:new Date(2020,06,21), y:[37823.61, 37990.55,	37742.05,  37930.33]},
+			{x:new Date(2020,06,22), y:[38178.07, 38199.27,	37601.62,  37871.52]},
+			{x:new Date(2020,06,23), y:[37814.92, 38225.03,	37738.59,  38140.47]},
+			{x:new Date(2020,06,24), y:[37949.59, 38235.73, 37748.41,  38128.90]},
+			{x:new Date(2020,06,27), y:[38275.34, 38275.34, 37769.44,  37934.73]},
+			{x:new Date(2020,06,28), y:[38052.18, 38554.72,	37998.13,	38492.95]}
+			
+			
+		]
+	}
+	]
+});
+}
+</script>
+</head>
+<body>
+<center><h1 style="font:20px;color:green;">Stock Market Charts</h1></center><br><br>
+<div class="chartContainer" style="width: 85%; height: 500px"></div>
+</body>
+</html>
