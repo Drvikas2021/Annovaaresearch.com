@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>ANNOVA RESESARCH</title>
-
+<title>Vikas</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Adding Bootstrap 4 ScrollSpy via JavaScript</title>
@@ -17,7 +18,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script> 
 <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script> 
+
 <script type="text/javascript">
+
+
 
 window.onload = function() {
 $(".chartContainer").CanvasJSChart({
@@ -78,7 +82,7 @@ $(".chartContainer").CanvasJSChart({
 </script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="navbar">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
   <a class="navbar-brand" href="#">Annova Research</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -87,16 +91,16 @@ $(".chartContainer").CanvasJSChart({
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.html"><i class="fa fa-home"> Home</i><span class="sr-only">(current)</span></a>
       </li>
       <li>
         <div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     DashBoard
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="dashboard.html">DashBoard</a>
-    <a class="dropdown-item" href="index2.html">RealTime-DashBoard</a>
+    <a class="dropdown-item" href="dashboard.html"><i class="fa fa-dashboard"> DashBoard</i></a>
+    <a class="dropdown-item" href="index2.html"><i class="fa fa-dashboard"> RealTime-DashBoard</i></a>
     
   </div>
 </div>
@@ -106,24 +110,29 @@ $(".chartContainer").CanvasJSChart({
          Statistics
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Indian Statistics</a>
-          <a class="dropdown-item" href="#">World Statistics</a>
+          <a class="dropdown-item" href="#"><i class="fa fa-database"> Indian Statistics</i></a>
+          <a class="dropdown-item" href="#"><i class="fa fa-globe"> World Statistics</i></a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Blogs&Articles</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Publication</a>
+        <a class="nav-link" href="#"><i class="fa fa-book"> Publication</i></a>
       </li>
     </ul>
+	<div class="navbar-nav ml-auto">
+                <a href="#" class="nav-item nav-link">Register</a>
+                <a href="#" class="nav-item nav-link">Login</a>
+            </div>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
-</div>
 
+</div>
+<center><h1 style="font:20px;color:green;">Stock Market Charts</h1></center><br><br>
 <div class="row">
   <div class="col-lg-12">
     <div class="card">
@@ -142,8 +151,11 @@ $(".chartContainer").CanvasJSChart({
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Daily Chart</a>
         </div>
+      
 
-<center><h1 style="font:20px;color:green;">Stock Market Charts</h1></center><br><br>
 <div class="chartContainer" style="width: 85%; height: 500px"></div>
+<a href="#" class="btn btn-primary">#</a>
+<div>
+
 </body>
 </html>
