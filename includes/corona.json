@@ -1,0 +1,214 @@
+[
+    {    
+	    "StateUTs":  "Andaman and Nicobar",
+        "coronaconfirmed": "928",    
+        "Recovered": "277",
+        "Mortality": "12"
+    },
+    {
+	    "StateUTs": "Andhra Pradesh",
+        "coronaconfirmed": "176333",    
+        "Recovered": "95625",
+        "Mortality": "1604"
+    },
+    {
+	     "StateUTs": "Arunachal Pradesh",
+        "coronaconfirmed": "1790",    
+        "Recovered": "1105",
+        "Mortality": "3"
+    },
+    {
+	     "StateUTs": "Assam",
+        "coronaconfirmed": "48161",    
+        "Recovered": "34421",
+        "Mortality": "115"
+    },
+    {
+	     "StateUTs": "Bihar",
+        "coronaconfirmed": "61788",    
+        "Recovered": "40348",
+        "Mortality": "347"
+    },    
+    {
+	     "StateUTs": "Chandigarh",
+        "coronaconfirmed": "1206",    
+        "Recovered": "715",
+        "Mortality": "20"
+    },
+	
+	{
+	     "StateUTs": "Chhattisgarh",
+        "coronaconfirmed": "10202",    
+        "Recovered": "7613",
+        "Mortality": "69"
+    },
+	{
+	     "StateUTs":  "Dadra and Nagar Haveli and Daman and Diu",
+        "coronaconfirmed": "1325",    
+        "Recovered": "919",
+        "Mortality": "2"
+    },
+	{
+	     "StateUTs":  "Delhi",
+        "coronaconfirmed": "139156",    
+        "Recovered": "125226",
+        "Mortality": "4033"
+    },
+	{
+	     "StateUTs":  "Goa",
+        "coronaconfirmed": "7075",    
+        "Recovered": "5114",
+        "Mortality": "60"
+    },
+	{
+	     "StateUTs":  "Gujrat",
+        "coronaconfirmed": "65599",    
+        "Recovered": "48376",
+        "Mortality": "2533"
+    },
+	{
+	     "StateUTs":  "Haryana",
+        "coronaconfirmed": "37796",    
+        "Recovered": "31226",
+        "Mortality": "448"
+    },
+	{
+	     "StateUTs":  "Himachal Pradesh",
+        "coronaconfirmed": "2879",    
+        "Recovered": "31226",
+        "Mortality": "448"
+    },
+	{
+	     "StateUTs":  "Jammu and Kashmir",
+        "coronaconfirmed": "22396",    
+        "Recovered": "14856",
+        "Mortality": "417"
+    },
+	{
+	     "StateUTs":  "Jharkhand",
+        "coronaconfirmed": "13940",    
+        "Recovered": "5164",
+        "Mortality": "128"
+    },
+	{
+	     "StateUTs":  "Kerala",
+        "coronaconfirmed": "27956",    
+        "Recovered": "16299",
+        "Mortality": "87"
+    },
+	{
+	     "StateUTs":  "Ladakh",
+        "coronaconfirmed": "1534",    
+        "Recovered": "1127",
+        "Mortality": "7"
+    },
+	{
+	     "StateUTs":  "Lakshadweep",
+        "coronaconfirmed": "0",    
+        "Recovered": "0",
+        "Mortality": "0"
+    },
+	{
+	     "StateUTs":  "Maharashtra",
+        "coronaconfirmed": "457956",    
+        "Recovered": "299356",
+        "Mortality": "16142"
+    },
+	{
+	     "StateUTs":  "Manipur",
+        "coronaconfirmed": "3018",    
+        "Recovered": "1814",
+        "Mortality": "7"
+    },
+	{
+	     "StateUTs":  "Meghalaya",
+        "coronaconfirmed": "917",    
+        "Recovered": "330",
+        "Mortality": "5"
+    },
+	{
+	     "StateUTs":  "Mizoram",
+        "coronaconfirmed": "504",    
+        "Recovered": "282",
+        "Mortality": "0"
+    },
+	{
+	     "StateUTs":  "Madhya Pradesh",
+        "coronaconfirmed": "35082",    
+        "Recovered": "25414",
+        "Mortality": "912"
+    },
+	{
+	     "StateUTs":  "Nagaland",
+        "coronaconfirmed": "2405",    
+        "Recovered": "659",
+        "Mortality": "5"
+    },
+	{
+	     "StateUTs":  "Odisha",
+        "coronaconfirmed": "37681",    
+        "Recovered": "24483",
+        "Mortality": "216"
+    },
+	{
+	     "StateUTs":  "Puducherry",
+        "coronaconfirmed": "4147",    
+        "Recovered": "2537",
+        "Mortality": "58"
+    },
+	{
+	     "StateUTs":  "Punjab",
+        "coronaconfirmed": "19015",    
+        "Recovered": "12491",
+        "Mortality": "462"
+    },
+	{
+	     "StateUTs":  "Rajasthan",
+        "coronaconfirmed": "46679",    
+        "Recovered": "32832",
+        "Mortality": "732"
+    },
+	{
+	     "StateUTs":  "Sikkim",
+        "coronaconfirmed": "783",    
+        "Recovered": "299",
+        "Mortality": "1"
+    },
+	{
+	     "StateUTs":  "Tamil Nadu",
+        "coronaconfirmed": "268285",    
+        "Recovered": "208784",
+        "Mortality": "4349"
+    },
+	{
+	     "StateUTs":  "Telengana",
+        "coronaconfirmed": "70958",    
+        "Recovered": "50814",
+        "Mortality": "576"
+    },
+	{
+	     "StateUTs":  "Tripura",
+        "coronaconfirmed": "5628",    
+        "Recovered": "3725",
+        "Mortality": "30"
+    },
+	{
+	     "StateUTs":  "Uttar Pradesh",
+        "coronaconfirmed": "100310",    
+        "Recovered": "57271",
+        "Mortality": "1817"
+    },
+	{
+	     "StateUTs":  "Uttarakhand",
+        "coronaconfirmed": "8008",    
+        "Recovered": "4847",
+        "Mortality": "95"
+    },
+	{
+	     "StateUTs":  "West Bengal",
+        "coronaconfirmed": "80984",    
+        "Recovered": "56884",
+        "Mortality": "1785"
+    }
+	
+]
