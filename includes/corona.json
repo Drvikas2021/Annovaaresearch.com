@@ -75,8 +75,8 @@
 	{
 	     "StateUTs":  "Himachal Pradesh",
         "coronaconfirmed": "2879",    
-        "Recovered": "31226",
-        "Mortality": "448"
+        "Recovered": "1710",
+        "Mortality": "14"
     },
 	{
 	     "StateUTs":  "Jammu and Kashmir",
@@ -85,17 +85,26 @@
         "Mortality": "417"
     },
 	{
-	     "StateUTs":  "Jharkhand",
+	  "StateUTs":  "Jharkhand",
         "coronaconfirmed": "13940",    
         "Recovered": "5164",
         "Mortality": "128"
     },
 	{
-	     "StateUTs":  "Kerala",
+	  "StateUTs":  "Karnataka",
+        "coronaconfirmed": "145830",    
+        "Recovered": "69272",
+        "Mortality": "2704"
+    },
+	{
+	"StateUTs":  "Kerala",
         "coronaconfirmed": "27956",    
         "Recovered": "16299",
         "Mortality": "87"
-    },
+		
+	},	
+        
+	
 	{
 	     "StateUTs":  "Ladakh",
         "coronaconfirmed": "1534",    
