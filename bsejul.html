@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ANNOVA RESESARCH</title>
+<title>Vikas</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Adding Bootstrap 4 ScrollSpy via JavaScript</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/style1.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script> 
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script> 
+
+<script type="text/javascript">
+
+
+
+window.onload = function() {
+$(".chartContainer").CanvasJSChart({
+	title: {
+		text: "BSE Index: July-2020"
+	},
+	subtitle: {
+	        text: "July:2020"
+	    },   
+	axisY: {
+		includeZero: false,
+		title: "BSE (Index)"
+	},
+	axisX: {
+		intervalType: "day",
+		interval: 1,
+		valueFormatString: "DD-MM-YYYY",
+		labelAngle: -45
+	},
+	toolTip: { 
+	content: "{x}20 <br/> <strong>BSE (Index):</strong> <br/>Open: {y[0]}, Close: {y[3]} <br/> Low: {y[2]}, High: {y[1]}"
+	},
+	data: [
+	{
+		type: "candlestick",
+		risingColor: "green",
+		color: "red",
+		dataPoints: [
+			{x:new Date(2020,06,01), y:[35009.59, 35467.23, 34927.20, 35414.45]},
+			{x:new Date(2020,06,02), y:[35604.00, 36014.92, 35595.36, 35843.70]},
+			{x:new Date(2020,06,03), y:[36025.38, 36110.21, 35872.38, 36021.42]},
+			{x:new Date(2020,06,06), y:[36313.46, 36661.66, 36254.02, 36487.28]},
+			{x:new Date(2020,06,07), y:[36660.35, 36723.27, 36271.09, 36674.52]},
+			{x:new Date(2020,06,08), y:[36738.38, 36828.43, 36234.17, 36329.01]},
+			{x:new Date(2020,06,09), y:[36450.69, 36806.30, 36422.30, 36737.69]},
+			{x:new Date(2020,06,10), y:[36555.13, 36748.89, 36401.11, 36594.33]},
+			{x:new Date(2020,06,13), y:[36880.66, 37024.20, 36533.96, 36693.69]},
+			{x:new Date(2020,06,14), y:[36517.28, 36538.10,	35877.42, 36033.06]},
+			{x:new Date(2020,06,15), y:[36314.76, 36810.25,	35894.96,  36051.81]},
+			{x:new Date(2020,06,16), y:[36517.28, 36538.10,	35877.42,  36033.06]},
+			{x:new Date(2020,06,17), y:[36547.75, 37125.98, 36512.92,  37020.14]},
+			{x:new Date(2020,06,20), y:[37409.03, 37478.87, 37185.78,  37418.99]},
+			{x:new Date(2020,06,21), y:[37823.61, 37990.55,	37742.05,  37930.33]},
+			{x:new Date(2020,06,22), y:[38178.07, 38199.27,	37601.62,  37871.52]},
+			{x:new Date(2020,06,23), y:[37814.92, 38225.03,	37738.59,  38140.47]},
+			{x:new Date(2020,06,24), y:[37949.59, 38235.73, 37748.41,  38128.90]},
+			{x:new Date(2020,06,27), y:[38275.34, 38275.34, 37769.44,  37934.73]},
+			{x:new Date(2020,06,28), y:[38052.18, 38554.72,	37998.13,	38492.95]},
+			{x:new Date(2020,06,29), y:[38427.15, 38617.03,	37884.41,	38492.95]},
+			{x:new Date(2020,06,30), y:[38262.83, 38413.81,	37678.42,	37736.07]}
+			
+			
+		]
+	}
+	]
+});
+}
+</script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <a class="navbar-brand" href="#">Annova Research</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html"><i class="fa fa-home"> Home</i><span class="sr-only">(current)</span></a>
+      </li>
+      <li>
+        <div class="dropdown">
+  <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    DashBoard
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="dashboard.html"><i class="fa fa-dashboard"> DashBoard</i></a>
+    <a class="dropdown-item" href="index2.html"><i class="fa fa-dashboard"> RealTime-DashBoard</i></a>
+    
+  </div>
+</div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Statistics
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#"><i class="fa fa-database"> Indian Statistics</i></a>
+          <a class="dropdown-item" href="#"><i class="fa fa-globe"> World Statistics</i></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Blogs&Articles</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-book"> Publication</i></a>
+      </li>
+    </ul>
+	<div class="navbar-nav ml-auto">
+                <a href="#" class="nav-item nav-link">Register</a>
+                <a href="#" class="nav-item nav-link">Login</a>
+            </div>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+</div>
+<center><h1 style="font:20px;color:green;">Stock Market Charts</h1></center><br><br>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title" class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Chart
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> June 2020</i></a>
+          <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> May 2020</i></a>
+		  <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> April 2020</i></a>
+		  <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> March 2020</i></a>
+		  <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> Feburary 2020</i></a>
+		  <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> January 2020</i></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Daily Chart</a>
+        </div>
+      
+
+<div class="chartContainer" style="width: 85%; height: 500px"></div>
+<a href="#" class="btn btn-primary">#</a>
+<div>
+<div><br><br>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-body">
+	  <img src="images/nifti-50.png" alt="NIFTY:50 Index">
+        <h5 class="card-title" class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Chart
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> Monday </i></a>
+          <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> Tuesday </i></a>
+		  <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> Wendesday</i></a>
+		  <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> Friday </i></a>
+		  <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> Satuday</i></a>
+		  
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Daily Chart</a>
+        </div>
+</div>	
+
+</body>
+</html>
