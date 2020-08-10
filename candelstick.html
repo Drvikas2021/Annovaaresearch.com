@@ -12,11 +12,12 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="styles/style1.css">
-<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/simples-sidebar.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script> 
 <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script> 
+
 
 <script type="text/javascript">
 
@@ -49,6 +50,9 @@ $(".chartContainer").CanvasJSChart({
 		risingColor: "green",
 		color: "red",
 		dataPoints: [
+		    {x:new Date(2020,07,10), y:[38168.42, 38430.69, 38073.29, 38182.08]},
+		    {x:new Date(2020,07,07), y:[37951.07, 38109.68, 37787.38, 38025.45]},
+		    {x:new Date(2020,07,06), y:[37946.80, 38221.40, 37755.10, 38040.57]},
 			{x:new Date(2020,07,05), y:[37595.73, 37596.02, 36911.23, 36939.60]},
 			{x:new Date(2020,07,04), y:[37092.86, 37745.60, 36987.73, 37687.91]},
 			{x:new Date(2020,07,03), y:[38139.96, 38139.96, 37550.60, 37663.33]}
@@ -95,13 +99,7 @@ $(".chartContainer").CanvasJSChart({
           <a class="dropdown-item" href="#"><i class="fa fa-database"> Indian Statistics</i></a>
           <a class="dropdown-item" href="#"><i class="fa fa-globe"> World Statistics</i></a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="candelstick.html">Stock Market</a>
-	 <a class="dropdown-item" href="#">Agriculture Statistics</a>
-	 <a class="dropdown-item" href="#">Industrial Statistics</a>
-	 <a class="dropdown-item" href="#">Economic Survey</a>	
-	<a class="dropdown-item" href="#">Banking & Money Market</a>
-	<a class="dropdown-item" href="#">Trade Statistics</a>	
-		
+          <a class="dropdown-item" href="#">Blogs&Articles</a>
         </div>
       </li>
       <li class="nav-item">
@@ -117,12 +115,33 @@ $(".chartContainer").CanvasJSChart({
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
-</nav>
+</nav><br><br />
+<!-- Sidebar -->
 
-</div>
-<center><h1 style="font:20px;color:green;">Stock Market Charts</h1></center><br><br>
+<div class="container-fluid">
+	  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+	<div class="row">
+	
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light">Agriculture Sector</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Industrial Sector</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Stock Market</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Banking and Finance</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">International Trade</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Economic Survey</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
 <div class="row">
-  <div class="col-lg-12">
+  <div class="col-md-12">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title" class="nav-item dropdown">
@@ -130,8 +149,7 @@ $(".chartContainer").CanvasJSChart({
          Chart
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	 <a class="dropdown-item" href="candelstick.html"><i class="fa fa-bar-chart"> August 2020</i></a>	
-	 <a class="dropdown-item" href="bsejul.html"><i class="fa fa-bar-chart"> July 2020</i></a>	
+		  <a class="dropdown-item" href="BSE-Index-jul.html"><i class="fa fa-bar-chart"> July 2020</i></a>
           <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> June 2020</i></a>
           <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> May 2020</i></a>
 		  <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> April 2020</i></a>
@@ -141,29 +159,17 @@ $(".chartContainer").CanvasJSChart({
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Daily Chart</a>
         </div>
-      <div class="dropdown dropleft float-right">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-      Tables
-    </button>
-    <div class="dropdown-menu">
-	  <a class="dropdown-item" href="#">July 2020</a>
-      <a class="dropdown-item" href="#">June 2020</a>
-      <a class="dropdown-item" href="#">May 2020</a>
-      <a class="dropdown-item" href="#">April 2020</a>
-    </div>
-  </div>
-</div>
+      
 
 <div class="chartContainer" style="width: 85%; height: 500px"></div>
 <a href="#" class="btn btn-primary">#</a>
 <div>
 <div><br><br>
 <div class="row">
-<h2 style="text-align:center;">NIFTI 50<h2>	
-  <div class="col-lg-12">
+  <div class="col-md-12">
     <div class="card">
       <div class="card-body">
-	  <img src="images/nifti-aug.png" alt="NIFTY:50 Index">
+	  <img src="images/nifti-50.png" alt="NIFTY:50 Index">
         <h5 class="card-title" class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Chart
@@ -179,6 +185,10 @@ $(".chartContainer").CanvasJSChart({
           <a class="dropdown-item" href="#">Daily Chart</a>
         </div>
 </div>	
+</div>
+</div>
+
+
 
 </body>
 </html>
