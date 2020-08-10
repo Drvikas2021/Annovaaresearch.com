@@ -128,12 +128,33 @@ $(".chartContainer").CanvasJSChart({
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
-</nav>
+</nav><br><br />
+<!-- Sidebar -->
 
-</div>
-<center><h1 style="font:20px;color:green;">Stock Market Charts</h1></center><br><br>
+<div class="container-fluid">
+	  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+	<div class="row">
+	
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light">Agriculture Sector</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Industrial Sector</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Stock Market</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Banking and Finance</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">International Trade</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Economic Survey</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
 <div class="row">
-  <div class="col-lg-12">
+  <div class="col-md-12">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title" class="nav-item dropdown">
@@ -141,7 +162,7 @@ $(".chartContainer").CanvasJSChart({
          Chart
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	 <a class="dropdown-item" href="candelstick.html"><i class="fa fa-bar-chart"> August 2020</i></a>	
+		  <a class="dropdown-item" href="BSE-Index-jul.html"><i class="fa fa-bar-chart"> July 2020</i></a>
           <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> June 2020</i></a>
           <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> May 2020</i></a>
 		  <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"> April 2020</i></a>
@@ -151,7 +172,18 @@ $(".chartContainer").CanvasJSChart({
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Daily Chart</a>
         </div>
-      
+      <div class="dropdown dropleft float-right">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      Tables
+    </button>
+    <div class="dropdown-menu">
+	  <a class="dropdown-item" href="#">July 2020</a>
+      <a class="dropdown-item" href="#">June 2020</a>
+      <a class="dropdown-item" href="#">May 2020</a>
+      <a class="dropdown-item" href="#">April 2020</a>
+    </div>
+  </div>
+</div>
 
 <div class="chartContainer" style="width: 85%; height: 500px"></div>
 <a href="#" class="btn btn-primary">#</a>
