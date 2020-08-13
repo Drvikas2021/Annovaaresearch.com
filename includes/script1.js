@@ -192,6 +192,21 @@ var optionsLine = {
     zoom: {
       enabled: false
     },
+	 yaxis: {
+      show: true,
+      showAlways: true,
+      showForNullSeries: true,
+      seriesName: undefined,
+      opposite: false,
+      reversed: false,
+      logarithmic: false,
+      tickAmount: 6,
+      min: 10000,
+      max: 3000000,
+      forceNiceScale: false,
+      floating: false,
+      decimalsInFloat: undefined,
+	 },	 
     dropShadow: {
       enabled: true,
       top: 3,
@@ -215,7 +230,7 @@ var optionsLine = {
     },
     {
       name: "Mortality",
-      data: [43465, 44478, 45365, 46200, 47033]
+      data: [42590, 43465, 44478, 45365, 46200, 47033]
     }
   ],
   title: {
@@ -225,7 +240,7 @@ var optionsLine = {
     offsetX: 20
   },
   subtitle: {
-    text: 'Statistics',
+    text: 'Weekly Statistics',
     offsetY: 55,
     offsetX: 20
   },
