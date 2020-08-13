@@ -188,7 +188,7 @@ var optionsLine = {
   chart: {
     height: 328,
     type: 'line',
-	
+  },
     zoom: {
       enabled: false
     },
@@ -213,7 +213,7 @@ var optionsLine = {
       left: 2,
       blur: 4,
       opacity: 1,
-    }
+    
   },
   stroke: {
     curve: 'smooth',
